@@ -1,0 +1,17 @@
+@import "tailwindcss";
+
+:root{
+  --primary: #C05800;
+  --primary-light: #FDFBD4;
+  --primary-dark: #713600;
+  --primary-background: #0d0d0d;
+
+
+}
+
+@layer base {
+  body {
+    background: var(--primary-background);
+    color: var(--primary-light);
+  }
+}
