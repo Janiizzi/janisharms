@@ -3,6 +3,7 @@
   transform-box: fill-box;
   transform-origin: center;
   pointer-events: bounding-box; /* ganze Box statt nur Linien */
+  cursor: pointer;
 }
 
 .skills svg g.icon:hover {
@@ -22,5 +23,5 @@
 .skills svg .shadow.is-hovered {
   transform: scale(1.05); /* leicht vergrößern */
   filter: blur(10px); /* Weichzeichnen */
-  opacity: 0.8;
+  opacity: 0.6;
 }

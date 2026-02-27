@@ -36,10 +36,10 @@ const Home = () => {
   }, []);
 
   return (
-    <>
+    <div>
       <div className='flex flex-row md:items-center justify-around space-around items-start gap-2 p-[10vw] flex-wrap md:pt-[15vh]'>
 
-        <div className='flex-1 '>
+        <div className='flex flex-col flex-1 '>
           <h1 className='text-4xl font-bold text-primary-white mb-4 min-w-[400px]'>
             <span className='type-line' style={{ animationDelay: '0.05s' }}>
               Hi, I&apos;m <span className='text-primary'>Janis</span>
@@ -51,8 +51,8 @@ const Home = () => {
               my learnings.
             </span>
           </h1>
-          <div className='rounded-full bg-primary mb-4 animate-ballStretch'></div>
-        </div>
+          <div className=' rounded-full bg-primary mb-4 animate-ballStretch w-15 h-3'></div>
+        </div>  
 
         <div className='skills flex items-center justify-center flex-1' ref={svgContainerRef}>
           <Skills className='min-w-[300px] max-w-[700px]' />
@@ -111,7 +111,7 @@ const Home = () => {
         animation: typewriterLineReveal 0.75s steps(28, end) forwards;
       }
     `}</style>
-    </>
+      </div>
   )
 }
 
