@@ -1,8 +1,6 @@
-import React from 'react'
 import logoJanis from '../assets/logo_janis_white.svg';
 import NavMenu from './NavMenu.tsx';
 import { Link } from 'react-router-dom';
-import Folder from './Folder.tsx'
 
 const Header = () => {
     return (
