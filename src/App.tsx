@@ -1,32 +1,23 @@
-
+import { Routes, Route } from 'react-router-dom';
+import Header from './components/Header';
+import Home from './pages/Home';
+import About from './pages/Projects';
+import Colorscheme from './pages/Colorscheme';
+import Contact from './pages/Contact';
 
 function App() {
   return (
-    <div className="flex items-center justify-center">
-      <div className="flex flex-row gap-4">
-        <div className="bg-primary w-32 h-32 flex items-center justify-center rounded">
-          Box
-        </div>
-        <div className="bg-primary-light w-32 h-32 flex items-center justify-center rounded">
-          Box
-        </div>
-        <div className="bg-primary-light-fine w-32 h-32 flex items-center justify-center rounded">
-          Box
-        </div>
+    <>
+      <Header />
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/projects" element={<About />} />
+        <Route path="/colorscheme" element={<Colorscheme />} />
+        <Route path="/contact" element={<Contact />} />
+      </Routes>
+    </>
 
-
-        <div className="border border-primary-light text-primary w-32 h-32 flex items-center justify-center rounded">
-          Box
-        </div>
-        <div className="border border-primary-light text-primary-text w-32 h-32 flex items-center justify-center rounded">
-          Box 
-        </div>
-        <div className="border border-primary-light text-primary-light w-32 h-32 flex items-center justify-center rounded">
-          Box 
-        </div>
-      </div>
-    </div>
-  )
+  );
 }
 
-export default App
+export default App;
