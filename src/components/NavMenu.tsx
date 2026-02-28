@@ -1,12 +1,15 @@
 import { useState } from 'react'
 import { NavLink } from 'react-router-dom'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faBars } from '@fortawesome/free-solid-svg-icons'
+import { faBars, faHouse } from '@fortawesome/free-solid-svg-icons'
 
 const NavMenu = () => {
   const [isOpen, setIsOpen] = useState(false)
   const navItems = [
-    { to: '/', label: 'Home' },
+    {
+      to: '/',
+      label: <FontAwesomeIcon icon={faHouse} aria-label="Home" />,  },
+    { to: '/skills', label: 'Skills' },
     { to: '/projects', label: 'Projects' },
     { to: '/contact', label: 'Contact' },
   ]
@@ -38,7 +41,7 @@ const NavMenu = () => {
 
       {isOpen && (
         <nav
-          className="absolute right-0 mt-2 flex w-40 flex-col gap-2 rounded-xl bg-primary-background p-2 shadow-lg"
+          className="absolute right-0 mt-2 flex w-40 flex-col gap-2 rounded-xl bg-primary-background/50 backdrop-blur-md p-2 shadow-lg z-10"
           style={{ animation: 'dropdownIn 220ms ease-out forwards' }}
         >
           {navItems.map((item, index) => (
@@ -47,10 +50,10 @@ const NavMenu = () => {
               to={item.to}
               onClick={handleClose}
               className={({ isActive }) =>
-                ` rounded-[5px] p-2 text-center transition-all duration-300 ease-out hover:-translate-y-0.5 ${
+                ` rounded-[5px] p-2 text-center transition-all duration-300 ease-out  ${
                   isActive
-                    ? 'bg-primary text-primary-background font-semibold hover:-translate-x-1'
-                    : 'bg-secondary-background hover:-translate-x-3 text-primary-grey'
+                    ? 'bg-primary text-primary-background font-semibold backdrop-blur-md'
+                    : 'bg-secondary-background/50 hover:-translate-x-1 text-primary-grey backdrop-blur-md'
                 }`
               }
               style={{
