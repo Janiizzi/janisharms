@@ -1,38 +1,9 @@
 import { useEffect, useRef } from 'react';
 import SkillsGraphic from '../assets/skills.svg?react';
-import '../pages/skills.css';
+import './skills.css';
 
 const Skills = () => {
 	const svgContainerRef = useRef<HTMLDivElement | null>(null);
-
-	useEffect(() => {
-		const svgRoot = svgContainerRef.current?.querySelector('svg');
-		if (!svgRoot) return;
-
-		const icons = Array.from(svgRoot.querySelectorAll<SVGGraphicsElement>('g.icon'));
-		const shadows = Array.from(svgRoot.querySelectorAll<SVGGraphicsElement>('g.shadow'));
-
-		const cleanup = icons.map((icon, index) => {
-			const shadow = shadows[index];
-			if (!shadow) return () => undefined;
-
-			const handleEnter = () => shadow.classList.add('is-hovered');
-			const handleLeave = () => shadow.classList.remove('is-hovered');
-
-			icon.addEventListener('mouseenter', handleEnter);
-			icon.addEventListener('mouseleave', handleLeave);
-
-			return () => {
-				icon.removeEventListener('mouseenter', handleEnter);
-				icon.removeEventListener('mouseleave', handleLeave);
-				shadow.classList.remove('is-hovered');
-			};
-		});
-
-		return () => {
-			cleanup.forEach((dispose) => dispose());
-		};
-	}, []);
 
 	return (
 		<div className='flex flex-row md:items-center justify-around space-around items-start gap-2 p-[10vw] flex-wrap md:pt-[15vh]'>
@@ -51,8 +22,8 @@ const Skills = () => {
 				<div className=' rounded-full bg-primary mb-4 animate-ballStretch w-15 h-3'></div>
 			</div>
 
-			<div className='skills flex items-center justify-center flex-1' ref={svgContainerRef}>
-				<SkillsGraphic className='min-w-[300px] max-w-[700px]' />
+			<div className='skills flex items-center justify-center flex-1 hover-lift' ref={svgContainerRef}>
+				<SkillsGraphic className='skills-graphic min-w-[300px] max-w-[700px]' />
 			</div>
 
 			<style>{`

@@ -1,0 +1,38 @@
+/* Hover only on shadows; icons are passive and move via sibling selectors */
+.skills-graphic .icon {
+	transition: transform 200ms ease;
+	will-change: transform;
+	pointer-events: none;
+	transform-box: fill-box;
+	transform-origin: center;
+}
+
+.skills-graphic .shadow {
+	transition: transform 200ms ease, opacity 200ms ease;
+	will-change: transform, opacity;
+	pointer-events: auto;
+	transform-box: fill-box;
+	transform-origin: center;
+}
+
+.skills-graphic .shadow path {
+	transition: transform 200ms ease, opacity 200ms ease;
+	transform-box: fill-box;
+	transform-origin: center;
+}
+
+/* Shadow hover scales shadow paths and lifts matching icon */
+.skills-graphic .shadow:hover { transform: scale(1.08); opacity: 0.5; }
+
+.skills-graphic .shadow.icon1:hover ~ .icon.icon1 { transform: translateY(-5vw); }
+.skills-graphic .shadow.icon2:hover ~ .icon.icon2 { transform: translateY(-5vw); }
+.skills-graphic .shadow.icon3:hover ~ .icon.icon3 { transform: translateY(-5vw); }
+.skills-graphic .shadow.icon4:hover ~ .icon.icon4 { transform: translateY(-5vw); }
+.skills-graphic .shadow.icon5:hover ~ .icon.icon5 { transform: translateY(-5vw); }
+.skills-graphic .shadow.icon6:hover ~ .icon.icon6 { transform: translateY(-5vw); }
+.skills-graphic .shadow.icon7:hover ~ .icon.icon7 { transform: translateY(-5vw); }
+.skills-graphic .shadow.icon8:hover ~ .icon.icon8 { transform: translateY(-5vw); }
+.skills-graphic .shadow.icon9:hover ~ .icon.icon9 { transform: translateY(-5vw); }
+.skills-graphic .shadow.icon10:hover ~ .icon.icon10 { transform: translateY(-5vw); }
+.skills-graphic .shadow.icon11:hover ~ .icon.icon11 { transform: translateY(-5vw); }
+.skills-graphic .shadow.icon12:hover ~ .icon.icon12 { transform: translateY(-5vw); }
