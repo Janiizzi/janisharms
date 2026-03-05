@@ -1,4 +1,4 @@
-import { useEffect, useRef } from 'react';
+import { useRef } from 'react';
 import SkillsGraphic from '../assets/skills.svg?react';
 import './skills.css';
 
@@ -22,7 +22,7 @@ const Skills = () => {
 				<div className=' rounded-full bg-primary mb-4 animate-ballStretch w-15 h-3'></div>
 			</div>
 
-			<div className='skills flex items-center justify-center flex-1 hover-lift' ref={svgContainerRef}>
+			<div className='skills flex items-center justify-center flex-1' ref={svgContainerRef}>
 				<SkillsGraphic className='skills-graphic min-w-[300px] max-w-[700px]' />
 			</div>
 
