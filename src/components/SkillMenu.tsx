@@ -1,6 +1,6 @@
 import { useRef } from 'react';
 import SkillsGraphic from '../assets/skills.svg?react';
-import './skills.css';
+import './SkillMenu.css';
 
 const Skills = () => {
 	const svgContainerRef = useRef<HTMLDivElement | null>(null);

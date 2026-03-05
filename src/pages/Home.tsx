@@ -1,5 +1,5 @@
 import Folder from '../components/Folder.tsx';
-import Skills from '../components/Skills';
+import Skills from '../components/SkillMenu.tsx';
 
 const Home = () => {
   return (
