@@ -1,4 +1,5 @@
 import { useForm, ValidationError } from '@formspree/react';
+import OuterCard from '../components/CardComponents/OuterCard';
 
 const Contact = () => {
   const [state, handleSubmit] = useForm('mwvrebwo');
@@ -6,21 +7,21 @@ const Contact = () => {
   if (state.succeeded) {
     return (
       <section className='px-6 md:px-10 py-8 md:py-12 flex justify-center'>
-        <div className='w-full max-w-3xl rounded-2xl border border-primary-white/15 bg-secondary-background/70 p-6 md:p-8'>
+        <OuterCard>
           <h1 className='text-3xl md:text-4xl font-bold text-primary-white'>
             <span className='type-line' style={{ animationDelay: '0.05s' }}>
               Contact
             </span>
           </h1>
           <p className='mt-6 text-secondary'>Message sent successfully. Thank you!</p>
-        </div>
+        </OuterCard>
       </section>
     );
   }
 
   return (
     <section className='px-6 md:px-10 py-8 md:py-12 flex justify-center'>
-      <div className='w-full max-w-3xl rounded-2xl border border-primary-white/15 bg-secondary-background/70 p-6 md:p-8'>
+      <OuterCard>
         <h1 className='text-3xl md:text-4xl font-bold text-primary-white'>
           <span className='type-line' style={{ animationDelay: '0.05s' }}>
             Contact
@@ -106,7 +107,7 @@ const Contact = () => {
             className='text-primary text-sm'
           />
         </form>
-      </div>
+      </OuterCard>
     </section>
   );
 }
