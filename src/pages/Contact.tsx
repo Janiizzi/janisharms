@@ -7,7 +7,7 @@ const Contact = () => {
   if (state.succeeded) {
     return (
       <section className='px-6 md:px-10 py-8 md:py-12 flex justify-center'>
-        <OuterCard>
+        <OuterCard className='w-full max-w-3xl'>
           <h1 className='text-3xl md:text-4xl font-bold text-primary-white'>
             <span className='type-line' style={{ animationDelay: '0.05s' }}>
               Contact
@@ -21,7 +21,7 @@ const Contact = () => {
 
   return (
     <section className='px-6 md:px-10 py-8 md:py-12 flex justify-center'>
-      <OuterCard>
+      <OuterCard className='w-full max-w-3xl'>
         <h1 className='text-3xl md:text-4xl font-bold text-primary-white'>
           <span className='type-line' style={{ animationDelay: '0.05s' }}>
             Contact
