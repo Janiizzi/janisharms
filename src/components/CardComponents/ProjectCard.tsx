@@ -22,7 +22,7 @@ const ProjectCard = ({ title, description, imageUrl, projectUrl, projectIsApp, s
   const [isHovered, setIsHovered] = useState(false);
 
   return (
-    <RevealOnView className='w-full flex-[1_1_20rem] max-w-[26rem] min-w-[20rem] m-4'>
+    <RevealOnView className='w-full'>
       <OuterCard className={`flex flex-col gap-2 h-full`}>
         <div
           className='picture-holder relative rounded-lg overflow-hidden'

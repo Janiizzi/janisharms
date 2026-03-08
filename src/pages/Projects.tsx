@@ -16,7 +16,7 @@ const Projects = () => {
           </RevealOnView>
         </div>
 
-      <div className='skillmenu flex flex-row flex-wrap justify-center mt-6'>
+      <div className='skillmenu grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-3 gap-6 mt-6 mx-4 md:mx-10 max-w-7xl self-center'>
 
         {projects.map((project, index) => (
           <ProjectCard
