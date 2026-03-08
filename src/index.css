@@ -27,3 +27,49 @@
     --color-secondary-background: var(--secondary-background);
     --color-primary-grey: var(--primary-grey);
 }
+
+html {
+  scroll-behavior: smooth;
+}
+
+@keyframes typewriterLineReveal {
+  from {
+    clip-path: inset(0 100% 0 0);
+    opacity: 0.7;
+  }
+  to {
+    clip-path: inset(0 0 0 0);
+    opacity: 1;
+  }
+}
+
+.type-line {
+  display: block;
+  clip-path: inset(0 100% 0 0);
+  opacity: 0;
+  animation: typewriterLineReveal 0.75s steps(28, end) forwards;
+}
+
+.reveal-on-view {
+  opacity: 0;
+  transform: translateY(14px);
+  transition:
+    opacity 500ms ease,
+    transform 500ms ease;
+  transition-delay: var(--reveal-delay, 0ms);
+  will-change: opacity, transform;
+}
+
+.reveal-on-view.is-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .reveal-on-view,
+  .reveal-on-view.is-visible {
+    opacity: 1;
+    transform: none;
+    transition: none;
+  }
+}

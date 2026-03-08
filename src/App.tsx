@@ -5,9 +5,6 @@ import About from './pages/Projects';
 import Colorscheme from './pages/Colorscheme';
 import Contact from './pages/Contact';
 import Skills from './pages/Skills';
-import Java from './pages/skills/Java';
-import Adobe from './pages/skills/Adobe';
-
 
 function App() {
   return (
@@ -19,8 +16,6 @@ function App() {
         <Route path="/colorscheme" element={<Colorscheme />} />
         <Route path="/contact" element={<Contact />} />
         <Route path="/skills" element={<Skills />} />
-        <Route path="/skills/java" element={<Java />} />
-        <Route path="/skills/adobe" element={<Adobe />} />
       </Routes>
     </>
 

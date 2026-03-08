@@ -1,0 +1,42 @@
+[
+    {
+        "title": "Painting Manager - Polypaint",
+        "description": "A workflow application for the polyball werkstatt at ETH Zürich, build with React, TypeScript and Tailwind CSS a PostgreSQL database and a Node.js backend.",
+        "imageUrl": "./card-previews/polypaint.png",
+        "projectUrl": "https://polypaint.janisharms.ch/home",
+        "projectIsApp": "true",
+        "skills": ["React", "TypeScript", "Node.js", "PostgreSQL", "Git", "Tailwind CSS"]
+    },
+    {
+        "title": "Polypaint",
+        "description": "This is a description of project 1. It gives an overview of what the project is about and what technologies were used.",
+        "imageUrl": "./card-previews/polypaint.png",
+        "projectUrl": "https://polypaint.janisharms.ch/home",
+        "projectIsApp": "true",
+        "skills": [""]
+    },
+    {
+        "title": "Polypaint",
+        "description": "This is a description of project 1. It gives an overview of what the project is about and what technologies were used.",
+        "imageUrl": "./card-previews/polypaint.png",
+        "projectUrl": "https://polypaint.janisharms.ch/home",
+        "projectIsApp": "true",
+        "skills": ["React", "TypeScript", "Tailwind CSS", "Node.js", "PostgreSQL"]
+    },
+    {
+        "title": "Polypaint",
+        "description": "This is a description of project 1. It gives an overview of what the project is about and what technologies were used.",
+        "imageUrl": "./card-previews/polypaint.png",
+        "projectUrl": "https://polypaint.janisharms.ch/home",
+        "projectIsApp": "false",
+        "skills": ["React", "TypeScript", "Tailwind CSS", "Node.js", "PostgreSQL"]
+    },
+    {
+        "title": "Polypaint",
+        "description": "This is a description of project 1. It gives an overview of what the project is about and what technologies were used.",
+        "imageUrl": "./card-previews/polypaint.png",
+        "projectUrl": "https://polypaint.janisharms.ch/home",
+        "projectIsApp": "false",
+        "skills": ["React", "TypeScript", "Tailwind CSS", "Node.js", "PostgreSQL"]
+    }
+]
