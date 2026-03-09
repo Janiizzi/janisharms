@@ -1,7 +1,7 @@
 [
     {
         "title": "Painting Manager - Polypaint",
-        "description": "A workflow application for the polyball werkstatt at ETH Zürich, build with React, TypeScript and Tailwind CSS a PostgreSQL database and a Node.js backend.",
+        "description": "A full-stack workflow management platform developed for the Polyball Werkstatt at ETH Zürich. The application enables users to track the progress of painting projects and manage studio space allocation, while a dedicated admin section provides control over user groups and permissions.",
         "imageUrl": "./card-previews/polypaint.png",
         "projectUrl": "https://polypaint.janisharms.ch/home",
         "projectIsApp": "true",
