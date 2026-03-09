@@ -2,55 +2,55 @@
     {
         "id": "frontend",
         "title": "Frontend Development",
-        "description": "Experience in building responsive and user-friendly interfaces using modern frontend technologies.",
+        "description": "Experienced in building responsive and user-friendly interfaces using modern frontend technologies. Developed across multiple academic and personal projects, including a full-stack platform built as part of the Web Engineering course at ETH Zürich.",
         
         "skills": [
         {"id": "react", "title": "React", 
-        "description": "This is a paragraph about React. Lots of Lorem Ipsum text here. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum dolor sit amet, consectetur adipiscing elit.", "mapTo": "React"}, 
+        "description": "Solid understanding of React's core concepts, including component architecture, state management, hooks, and client-side routing. Applied these skills across multiple projects, most notably in a full-stack platform developed as a semester project. Capable of independently building complete applications, with occasional reference to documentation for setup and deployment configurations.", "mapTo": "React"}, 
 
         {"id": "ts", "title": "TypeScript", 
-        "description": "This is a paragraph about TypeScript Lots of Lorem Ipsum text here. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum dolor sit amet, consectetur adipiscing elit.", "mapTo": "TypeScript"}, 
+        "description": "Learned TypeScript from the ground up and apply it consistently across all JavaScript projects. Comfortable defining types and interfaces deliberately to ensure type safety, rather than treating it as an afterthought. TypeScript is the default choice for any new frontend work.", "mapTo": "TypeScript"}, 
 
         {"id": "tailwind", "title": "Tailwind CSS", 
-        "description": "This is a paragraph about Tailwind CSS Lots of Lorem Ipsum text here. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum dolor sit amet, consectetur adipiscing elit.", "mapTo": "Tailwind CSS"}, 
+        "description": "Comfortable in Tailwind CSS, having used it across multiple projects. Comfortable with the full range of utility classes for layout, spacing, typography, and responsiveness. For more complex custom animations, occasional reference to documentation is needed, but day-to-day styling is handled confidently without external guidance.", "mapTo": "Tailwind CSS"}, 
 
         {"id": "css", "title": "CSS", 
-        "description": "This is a paragraph about CSS Lots of Lorem Ipsum text here. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum dolor sit amet, consectetur adipiscing elit.", "mapTo": "CSS"}, 
+        "description": "Strong working knowledge of CSS built through consistent use across multiple projects. Comfortable with layouts, flexbox, grid, responsive design, and component-level styling. More intricate animation sequences occasionally require consulting documentation, but the foundational and intermediate skill set is well established.", "mapTo": "CSS"}, 
 
         {"id": "js", "title": "JavaScript", 
-        "description": "This is a paragraph about JavaScript Lots of Lorem Ipsum text here. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum dolor sit amet, consectetur adipiscing elit.", "mapTo": "JavaScript"}]
+        "description": "Solid grasp of modern JavaScript, acquired through a Web Engineering course and applied in subsequent projects. Comfortable with ES6+ syntax, asynchronous patterns, DOM manipulation, and working within frontend frameworks. TypeScript is now the preferred environment for new work.", "mapTo": "JavaScript"}]
 
     },
 
     {
         "id": "backend",
         "title": "Backend Development",
-        "description": "Experience in building robust and scalable backend systems using modern technologies.",
+        "description": "Practical experience building backend systems through academic coursework and project work. Developed and deployed a RESTful API with a relational database as part of a full-stack semester project at ETH Zürich.",
         
         "skills": [
 
-        {"id": "sql", "title": "Relational Databases", "description": "This is a paragraph about SQL Lots of Lorem Ipsum text here. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum dolor sit amet, consectetur adipiscing elit.", "mapTo": "SQL"}, 
+        {"id": "sql", "title": "Relational Databases", "description": "Formal coursework in relational database systems, covering SQL, schema design, and query optimisation. Applied this knowledge practically using PostgreSQL in a full-stack semester project, where the database underpinned a workflow management platform for a real-world client.", "mapTo": "SQL"}, 
 
-        {"id": "nodejs", "title": "Node.js", "description": "This is a paragraph about Node.js Lots of Lorem Ipsum text here. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum dolor sit amet, consectetur adipiscing elit.", "mapTo": "Node.js"},
+        {"id": "nodejs", "title": "Node.js", "description": "Hands-on experience with Node.js through two projects, gaining familiarity with its runtime environment, package ecosystem, and building simple server-side logic. Solid conceptual understanding of its event-driven architecture, though most backend work to date has been primarily in Python.", "mapTo": "Node.js"},
         
-        {"id": "python", "title": "Python", "description": "This is a paragraph about Python Lots of Lorem Ipsum text here. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum dolor sit amet, consectetur adipiscing elit.", "mapTo": "Python"}
+        {"id": "python", "title": "Python", "description": "Solid experience with Python across multiple contexts. Used it in a dedicated programming course, in Numerical Methods (covering topics such as numerical integration, linear algebra, root-finding algorithms as well as machine learning), and as the primary backend language in a full-stack semester project using FastAPI. Comfortable building APIs, implementing algorithms, and working with scientific computing libraries.", "mapTo": "Python"}
     ]
     },
 
     {
         "id": "design",
         "title": "Design Tools",
-        "description": "Experience in using design tools to create visually appealing and user-friendly interfaces.",
+        "description": "Self-taught in the Adobe Creative Suite through years of independent practice and continuous learning via tutorials. Able to produce polished visual outputs across print and digital media.",
         "skills": [
         
         {"id": "photoshop", "title": "Adobe Photoshop", 
-        "description": "This is a paragraph about Adobe Photoshop Lots of Lorem Ipsum text here. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum dolor sit amet, consectetur adipiscing elit.", "mapTo": "Photoshop"}, 
+        "description": "Self-taught Photoshop user with several years of practical experience. Developed skills through independent projects and an ongoing habit of following tutorials to expand technique. Comfortable with photo editing, compositing, and producing digital assets for use in web and design projects.", "mapTo": "Photoshop"}, 
 
         {"id": "illustrator", "title": "Adobe Illustrator", 
-        "description": "This is a paragraph about Adobe Illustrator Lots of Lorem Ipsum text here. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum dolor sit amet, consectetur adipiscing elit.", "mapTo": "Illustrator"}, 
+        "description": "Self-taught in Adobe Illustrator, with experience in vector illustration, icon design, and producing scalable graphics for digital and print use. Skills developed independently through project work and regular engagement with tutorial resources.", "mapTo": "Illustrator"}, 
 
         {"id": "indesign", "title": "Adobe Indesign", 
-        "description": "This is a paragraph about Adobe Indesign Lots of Lorem Ipsum text here. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum dolor sit amet, consectetur adipiscing elit.", "mapTo": "Indesign"}
+        "description": "Self-taught in Adobe InDesign, with practical experience in layout design for multi-page documents. Comfortable with typesetting, grid-based layouts, and preparing files for both print and digital distribution. Skills developed through independent practice and tutorial-driven learning.", "mapTo": "Indesign"}
     ]
 
 
@@ -59,32 +59,32 @@
     {
         "id": "languages",
         "title": "Programming Languages",
-        "description": "Proficiency in various programming languages that are essential for software development.",
+        "description": "Formal training in several programming languages through dedicated courses at ETH Zürich, providing a broad foundation across paradigms including imperative, object-oriented, and functional programming.",
         "skills": [
         {"id": "java", "title": "Java", 
-        "description": "This is a paragraph about Java Lots of Lorem Ipsum text here. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum dolor sit amet, consectetur adipiscing elit.", "mapTo": "Java"},
+        "description": "Completed a full semester of Java programming, covering object-oriented design principles, data structures, and core language concepts. Gained a solid understanding of the language's type system, class hierarchy, and standard library through structured coursework and programming exercises.", "mapTo": "Java"},
 
         {"id": "python", "title": "Python", 
-        "description": "This is a paragraph about Python Lots of Lorem Ipsum text here. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum dolor sit amet, consectetur adipiscing elit.", "mapTo": "Python"}, 
+        "description": "Solid experience with Python across multiple courses and projects, including a dedicated programming course, Numerical Methods, and a full-stack semester project where Python served as the backend language via FastAPI. Comfortable with a wide range of applications from algorithm implementation to API development.", "mapTo": "Python"}, 
 
         {"id": "haskell", "title": "Haskell", 
-        "description": "This is a paragraph about Haskell Lots of Lorem Ipsum text here. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum dolor sit amet, consectetur adipiscing elit.", "mapTo": "Haskell"},
+        "description": "Completed a semester-long course in Haskell, developing skills in functional programming concepts including pure functions, immutability, type inference, higher-order functions, and monads. The course provided a strong theoretical perspective on programming that has informed work in other languages.", "mapTo": "Haskell"},
 
         {"id": "c", "title": "C", 
-        "description": "This is a paragraph about C Lots of Lorem Ipsum text here. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum dolor sit amet, consectetur adipiscing elit.", "mapTo": "C"}]
+        "description": "Completed a full semester in C programming, covering low-level programming concepts including memory management, pointers, and systems-level thinking. The course provided a strong foundation in understanding how software interacts with hardware, complementing higher-level language experience.", "mapTo": "C"}]
     },
 
     {
         "id": "other",
         "title": "Other Skills",
-        "description": "Experience in various other skills that complement my frontend and backend development expertise.",
+        "description": "Practical experience with essential development tools used throughout academic projects and personal work.",
         "skills": [
         
         {"id": "git", "title": "Git", 
-        "description": "This is a paragraph about Git Lots of Lorem Ipsum text here. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum dolor sit amet, consectetur adipiscing elit.", "mapTo": "Git"}, 
+        "description": "Comfortable with Git for both individual and collaborative development. Experienced with branching workflows, pull requests, and code reviews as practised in team projects. Handles day-to-day version control independently, with occasional reference to documentation for more advanced operations.", "mapTo": "Git"}, 
 
         {"id": "docker", "title": "Docker", 
-        "description": "This is a paragraph about Docker Lots of Lorem Ipsum text here. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum dolor sit amet, consectetur adipiscing elit.", "mapTo": "Docker"}
+        "description": "Conceptual understanding of containerisation and how Docker is used to package and deploy applications. Applied Docker in the context of deploying full-stack and frontend applications to a personal VPS, working with Dockerfiles and Compose configurations. More complex setups are approached with reference to documentation or AI-assisted tooling.", "mapTo": "Docker"}
     ]
     }
 ]
