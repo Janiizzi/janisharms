@@ -20,6 +20,7 @@ interface ProjectCardProps {
 
 const ProjectCard = ({ title, description, imageUrl, projectUrl, projectIsApp, skills }: ProjectCardProps) => {
   const [isHovered, setIsHovered] = useState(false);
+  const [showAllSkills, setShowAllSkills] = useState(false);
 
   return (
     <RevealOnView className='w-full'>
@@ -45,17 +46,26 @@ const ProjectCard = ({ title, description, imageUrl, projectUrl, projectIsApp, s
           </div>
           <div className='flex flex-wrap gap-x-1'>
             {skills.map((skill, index) => (
-              index < 4 ? (
+              (showAllSkills || index < 4) ? (
                 <span
                   key={index}
                   className='relative inline-block'
                 >
                   <HashLink to={`/skills${skillMap[skill]?.path}`} className='text-base text-primary hover:underline transition'>
                     {skillMap[skill] ? skillMap[skill].name : skill}
-                    {index < Math.min(skills.length - 1, 3) && ','}
+                    {(showAllSkills ? index < skills.length - 1 : index < Math.min(skills.length - 1, 3)) && ','}
                   </HashLink>
                 </span>
-              ) : null))}
+              ) : null
+            ))}
+            {skills.length > 4 && (
+              <button
+                onClick={() => setShowAllSkills(prev => !prev)}
+                className='text-base text-primary-grey hover:text-primary transition cursor-pointer'
+              >
+                {showAllSkills ? 'less' : '...'}
+              </button>
+            )}
           </div>
 
 
