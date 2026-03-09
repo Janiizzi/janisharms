@@ -13,88 +13,118 @@ import prIcon from '../assets/skill-icons/pr.svg';
 import gitIcon from '../assets/skill-icons/git.svg';
 import aeIcon from '../assets/skill-icons/ae.svg';
 import jsIcon from '../assets/skill-icons/js.svg';
+import reactIconL from '../assets/skill-icons/react-l.svg';
+import javaIconL from '../assets/skill-icons/java-l.svg';
+import pythonIconL from '../assets/skill-icons/python-l.svg';
+import tsIconL from '../assets/skill-icons/ts-l.svg';
+import sqlIconL from '../assets/skill-icons/sql-l.svg';
+import dockerIconL from '../assets/skill-icons/docker-l.svg';
+import psIconL from '../assets/skill-icons/ps-l.svg';
+import aiIconL from '../assets/skill-icons/ai-l.svg';
+import idIconL from '../assets/skill-icons/id-l.svg';
+import haskellIconL from '../assets/skill-icons/haskell-l.svg';
+import prIconL from '../assets/skill-icons/pr-l.svg';
+import gitIconL from '../assets/skill-icons/git-l.svg';
+import aeIconL from '../assets/skill-icons/ae-l.svg';
+import jsIconL from '../assets/skill-icons/js-l.svg';
 
 export interface Skill {
     name: string;
     path: string;
     iconUrl: string;
+    iconUrlAlt?: string;
 }
 
 export const skillMap: Record<string, Skill> = {
     "React": {
         name: 'React',
         path: '#react',
-        iconUrl: reactIcon
+        iconUrl: reactIcon,
+        iconUrlAlt: reactIconL
     },
     "Java": {
         name: 'Java',
         path: '#java',
-        iconUrl: javaIcon
+        iconUrl: javaIcon,
+        iconUrlAlt: javaIconL
     },
     "Python": {
         name: 'Python',
         path: '#python',
-        iconUrl: pythonIcon
+        iconUrl: pythonIcon,
+        iconUrlAlt: pythonIconL
     },
     "TypeScript": {
         name: 'TypeScript',
         path: '#ts',
-        iconUrl: tsIcon
+        iconUrl: tsIcon,
+        iconUrlAlt: tsIconL
     },
     "PostgreSQL": {
         name: 'PostgreSQL',
         path: '#sql',
-        iconUrl: sqlIcon
+        iconUrl: sqlIcon,
+        iconUrlAlt: sqlIconL
     },
     "MySQL": {
         name: 'MySQL',
         path: '#sql',
-        iconUrl: sqlIcon
+        iconUrl: sqlIcon,
+        iconUrlAlt: sqlIconL
     },
     "SQL": {
         name: 'SQL',
         path: '#sql',
-        iconUrl: sqlIcon
+        iconUrl: sqlIcon,
+        iconUrlAlt: sqlIconL
     },
     "Docker": {
         name: 'Docker',
         path: '#docker',
-        iconUrl: dockerIcon
+        iconUrl: dockerIcon,
+        iconUrlAlt: dockerIconL
     },
     "Photoshop": {
         name: 'Photoshop',
         path: '#ps',
-        iconUrl: psIcon
+        iconUrl: psIcon,
+        iconUrlAlt: psIconL
     },
     "Illustrator": {
         name: 'Illustrator',
         path: '#ai',
-        iconUrl: aiIcon
+        iconUrl: aiIcon,
+        iconUrlAlt: aiIconL
     },
     "Indesign": {
         name: 'Indesign',
         path: '#id',
-        iconUrl: idIcon
+        iconUrl: idIcon,
+        iconUrlAlt: idIconL
     },
     "Haskell": {
         name: 'Haskell',
         path: '#haskell',
-        iconUrl: haskellIcon
+        iconUrl: haskellIcon,
+        iconUrlAlt: haskellIconL
     },
     "Premiere": {
         name: 'Premiere Pro',
         path: '#pr',
-        iconUrl: prIcon
+        iconUrl: prIcon,
+        iconUrlAlt: prIconL
     },
     "Git": {
         name: 'Git',
         path: '#git',
-        iconUrl: gitIcon
+        iconUrl: gitIcon,
+        iconUrlAlt: gitIconL
     },
     "AfterEffects": {
         name: 'After Effects',
         path: '#ae',
-        iconUrl: aeIcon
+        iconUrl: aeIcon,
+        iconUrlAlt: aeIconL
     },
     "Node.js": {
         name: 'Node.js',
@@ -104,7 +134,8 @@ export const skillMap: Record<string, Skill> = {
     "JavaScript": {
         name: 'JavaScript',
         path: '#js',
-        iconUrl: jsIcon
+        iconUrl: jsIcon,
+        iconUrlAlt: jsIconL
     },
     "C": {
         name: 'C',

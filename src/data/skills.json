@@ -5,15 +5,20 @@
         "description": "Experience in building responsive and user-friendly interfaces using modern frontend technologies.",
         
         "skills": [
-        {"id": "react", "title": "React", "description": "This is a paragraph about React", "mapTo": "React"}, 
+        {"id": "react", "title": "React", 
+        "description": "This is a paragraph about React. Lots of Lorem Ipsum text here. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum dolor sit amet, consectetur adipiscing elit.", "mapTo": "React"}, 
 
-        {"id": "ts", "title": "TypeScript", "description": "This is a paragraph about TypeScript", "mapTo": "TypeScript"}, 
+        {"id": "ts", "title": "TypeScript", 
+        "description": "This is a paragraph about TypeScript Lots of Lorem Ipsum text here. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum dolor sit amet, consectetur adipiscing elit.", "mapTo": "TypeScript"}, 
 
-        {"id": "tailwind", "title": "Tailwind CSS", "description": "This is a paragraph about Tailwind CSS", "mapTo": "Tailwind CSS"}, 
+        {"id": "tailwind", "title": "Tailwind CSS", 
+        "description": "This is a paragraph about Tailwind CSS Lots of Lorem Ipsum text here. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum dolor sit amet, consectetur adipiscing elit.", "mapTo": "Tailwind CSS"}, 
 
-        {"id": "css", "title": "CSS", "description": "This is a paragraph about CSS", "mapTo": "CSS"}, 
+        {"id": "css", "title": "CSS", 
+        "description": "This is a paragraph about CSS Lots of Lorem Ipsum text here. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum dolor sit amet, consectetur adipiscing elit.", "mapTo": "CSS"}, 
 
-        {"id": "js", "title": "JavaScript", "description": "This is a paragraph about JavaScript", "mapTo": "JavaScript"}]
+        {"id": "js", "title": "JavaScript", 
+        "description": "This is a paragraph about JavaScript Lots of Lorem Ipsum text here. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum dolor sit amet, consectetur adipiscing elit.", "mapTo": "JavaScript"}]
 
     },
 
@@ -24,11 +29,11 @@
         
         "skills": [
 
-        {"id": "sql", "title": "Relational Databases", "description": "This is a paragraph about SQL", "mapTo": "SQL"}, 
+        {"id": "sql", "title": "Relational Databases", "description": "This is a paragraph about SQL Lots of Lorem Ipsum text here. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum dolor sit amet, consectetur adipiscing elit.", "mapTo": "SQL"}, 
 
-        {"id": "nodejs", "title": "Node.js", "description": "This is a paragraph about Node.js", "mapTo": "Node.js"},
+        {"id": "nodejs", "title": "Node.js", "description": "This is a paragraph about Node.js Lots of Lorem Ipsum text here. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum dolor sit amet, consectetur adipiscing elit.", "mapTo": "Node.js"},
         
-        {"id": "python", "title": "Python", "description": "This is a paragraph about Python", "mapTo": "Python"}
+        {"id": "python", "title": "Python", "description": "This is a paragraph about Python Lots of Lorem Ipsum text here. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum dolor sit amet, consectetur adipiscing elit.", "mapTo": "Python"}
     ]
     },
 
@@ -38,11 +43,14 @@
         "description": "Experience in using design tools to create visually appealing and user-friendly interfaces.",
         "skills": [
         
-        {"id": "photoshop", "title": "Adobe Photoshop", "description": "This is a paragraph about Adobe Photoshop", "mapTo": "Photoshop"}, 
+        {"id": "photoshop", "title": "Adobe Photoshop", 
+        "description": "This is a paragraph about Adobe Photoshop Lots of Lorem Ipsum text here. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum dolor sit amet, consectetur adipiscing elit.", "mapTo": "Photoshop"}, 
 
-        {"id": "illustrator", "title": "Adobe Illustrator", "description": "This is a paragraph about Adobe Illustrator", "mapTo": "Illustrator"}, 
+        {"id": "illustrator", "title": "Adobe Illustrator", 
+        "description": "This is a paragraph about Adobe Illustrator Lots of Lorem Ipsum text here. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum dolor sit amet, consectetur adipiscing elit.", "mapTo": "Illustrator"}, 
 
-        {"id": "indesign", "title": "Adobe Indesign", "description": "This is a paragraph about Adobe Indesign", "mapTo": "Indesign"}
+        {"id": "indesign", "title": "Adobe Indesign", 
+        "description": "This is a paragraph about Adobe Indesign Lots of Lorem Ipsum text here. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum dolor sit amet, consectetur adipiscing elit.", "mapTo": "Indesign"}
     ]
 
 
@@ -53,13 +61,17 @@
         "title": "Programming Languages",
         "description": "Proficiency in various programming languages that are essential for software development.",
         "skills": [
-        {"id": "java", "title": "Java", "description": "This is a paragraph about Java", "mapTo": "Java"},
+        {"id": "java", "title": "Java", 
+        "description": "This is a paragraph about Java Lots of Lorem Ipsum text here. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum dolor sit amet, consectetur adipiscing elit.", "mapTo": "Java"},
 
-        {"id": "python", "title": "Python", "description": "This is a paragraph about Python", "mapTo": "Python"}, 
+        {"id": "python", "title": "Python", 
+        "description": "This is a paragraph about Python Lots of Lorem Ipsum text here. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum dolor sit amet, consectetur adipiscing elit.", "mapTo": "Python"}, 
 
-        {"id": "haskell", "title": "Haskell", "description": "This is a paragraph about Haskell", "mapTo": "Haskell"},
+        {"id": "haskell", "title": "Haskell", 
+        "description": "This is a paragraph about Haskell Lots of Lorem Ipsum text here. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum dolor sit amet, consectetur adipiscing elit.", "mapTo": "Haskell"},
 
-        {"id": "c", "title": "C", "description": "This is a paragraph about C", "mapTo": "C"}]
+        {"id": "c", "title": "C", 
+        "description": "This is a paragraph about C Lots of Lorem Ipsum text here. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum dolor sit amet, consectetur adipiscing elit.", "mapTo": "C"}]
     },
 
     {
@@ -68,9 +80,11 @@
         "description": "Experience in various other skills that complement my frontend and backend development expertise.",
         "skills": [
         
-        {"id": "git", "title": "Git", "description": "This is a paragraph about Git", "mapTo": "Git"}, 
+        {"id": "git", "title": "Git", 
+        "description": "This is a paragraph about Git Lots of Lorem Ipsum text here. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum dolor sit amet, consectetur adipiscing elit.", "mapTo": "Git"}, 
 
-        {"id": "docker", "title": "Docker", "description": "This is a paragraph about Docker", "mapTo": "Docker"}
+        {"id": "docker", "title": "Docker", 
+        "description": "This is a paragraph about Docker Lots of Lorem Ipsum text here. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum dolor sit amet, consectetur adipiscing elit.", "mapTo": "Docker"}
     ]
     }
 ]
