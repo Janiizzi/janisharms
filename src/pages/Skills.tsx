@@ -1,3 +1,4 @@
+import { Helmet } from 'react-helmet-async';
 import SkillCard from "../components/CardComponents/SkillCard"
 import skills from "../data/skills.json"
 import RevealOnView from "../components/RevealOnView";
@@ -5,6 +6,11 @@ import RevealOnView from "../components/RevealOnView";
 const Skills = () => {
   return (
     <div className='skills-page flex flex-col [&>*:last-child]:mb-16'>
+      <Helmet>
+        <title>Skills – Janis Harms</title>
+        <meta name='description' content='An overview of the technologies and tools I have learned and worked with, including web development, frameworks, and more.' />
+        <link rel='canonical' href='https://janisharms.ch/skills' />
+      </Helmet>
       <div className='projects flex flex-col gap-1 align-items-center justify-center text-center mt-6 md:mt-10 mx-4 md:mx-10'>
           <RevealOnView className='text-3xl md:text-4xl font-bold text-primary-white'>
             Personal Skills

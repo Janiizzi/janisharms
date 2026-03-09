@@ -1,3 +1,4 @@
+import { Helmet } from 'react-helmet-async';
 import { useForm, ValidationError } from '@formspree/react';
 import OuterCard from '../components/CardComponents/OuterCard';
 
@@ -21,6 +22,11 @@ const Contact = () => {
 
   return (
     <section className='px-6 md:px-10 py-8 md:py-12 flex justify-center'>
+      <Helmet>
+        <title>Contact – Janis Harms</title>
+        <meta name='description' content='Get in touch with Janis Harms. Send a message directly via the contact form.' />
+        <link rel='canonical' href='https://janisharms.ch/contact' />
+      </Helmet>
       <OuterCard className='w-full max-w-3xl'>
         <h1 className='text-3xl md:text-4xl font-bold text-primary-white'>
           <span className='type-line' style={{ animationDelay: '0.05s' }}>

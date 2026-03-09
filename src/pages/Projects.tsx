@@ -1,6 +1,7 @@
 import ProjectCard from '../components/CardComponents/ProjectCard';
 import projects from '../data/projects.json';
 import RevealOnView from '../components/RevealOnView';
+import { Helmet } from 'react-helmet-async';
 
 const Projects = () => {
   return (
@@ -31,6 +32,11 @@ const Projects = () => {
         ))}
 
       </div>
+
+      <Helmet>
+        <title>Projects – Janis Harms</title>
+        <meta name="description" content="An overview of my projects..." />
+      </Helmet>
 
     </div>
   )
