@@ -5,6 +5,7 @@ import About from './pages/Projects';
 import Colorscheme from './pages/Colorscheme';
 import Contact from './pages/Contact';
 import Skills from './pages/Skills';
+import Footer from './components/Footer';
 
 function App() {
   return (
@@ -17,6 +18,7 @@ function App() {
         <Route path="/contact" element={<Contact />} />
         <Route path="/skills" element={<Skills />} />
       </Routes>
+      <Footer />
     </>
 
   );
