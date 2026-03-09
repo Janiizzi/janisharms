@@ -10,7 +10,7 @@ const Skills = () => {
 			<div className='flex flex-col flex-1 '>
 				<h1 className='text-4xl font-bold text-primary-white mb-4 md:min-w-[400px]'>
 					<span className='type-line' style={{ animationDelay: '0.05s' }}>
-						Hi, I&apos;m <span className='text-primary'>Janis</span>
+						Hi, I&apos;m <span className='text-primary'>Janis </span>
 					</span>
 					<span className='type-line' style={{ animationDelay: '0.5s' }}>
 						a <span className='text-primary'>CS Student</span> showcasing
