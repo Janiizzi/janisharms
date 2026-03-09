@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { useEffect, useRef, useState } from 'react'
 import { NavLink } from 'react-router-dom'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faBars, faHouse } from '@fortawesome/free-solid-svg-icons'
@@ -14,6 +14,8 @@ const NavMenu = () => {
     { to: '/contact', label: 'Contact' },
   ]
 
+  const menuRef = useRef<HTMLDivElement>(null)
+
   const handleToggle = () => {
     setIsOpen(prev => !prev)
   }
@@ -22,22 +24,33 @@ const NavMenu = () => {
     setIsOpen(false)
   }
 
+  useEffect(() => {
+    const handleClickOutside = (e: MouseEvent) => {
+      if (menuRef.current && !menuRef.current.contains(e.target as Node)) {
+        setIsOpen(false)
+      }
+    }
+    document.addEventListener('mousedown', handleClickOutside)
+    return () => document.removeEventListener('mousedown', handleClickOutside)
+  }, [])
+
   return (
-    <div className="relative hover:bg-secondary-background rounded-lg p-2 transition-colors duration-300 ease-out">
-      <button
-        type="button"
-        onClick={handleToggle}
-        aria-expanded={isOpen}
-        aria-label="Toggle navigation menu"
-        className="group cursor-pointer"
-      >
+    <div
+      ref={menuRef}
+      role="button"
+      tabIndex={0}
+      onClick={handleToggle}
+      onKeyDown={(e) => e.key === 'Enter' || e.key === ' ' ? handleToggle() : undefined}
+      aria-expanded={isOpen}
+      aria-label="Toggle navigation menu"
+      className="group relative hover:bg-secondary-background rounded-lg p-2 transition-colors duration-300 ease-out cursor-pointer"
+    >
         <FontAwesomeIcon
           icon={faBars}
-          className={`text-xl text-primary-grey hover:text-primary transition-transform duration-300 ease-out  ${
+          className={`text-xl text-primary-grey group-hover:text-primary transition-transform duration-300 ease-out  ${
             isOpen ? 'rotate-360' : 'rotate-0'
           }`}
         />
-      </button>
 
       {isOpen && (
         <nav
