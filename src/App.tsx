@@ -1,23 +1,27 @@
+import { lazy, Suspense } from 'react';
 import { Routes, Route } from 'react-router-dom';
 import Header from './components/Header';
-import Home from './pages/Home';
-import About from './pages/Projects';
-import Colorscheme from './pages/Colorscheme';
-import Contact from './pages/Contact';
-import Skills from './pages/Skills';
 import Footer from './components/Footer';
+
+const Home = lazy(() => import('./pages/Home'));
+const Projects = lazy(() => import('./pages/Projects'));
+const Colorscheme = lazy(() => import('./pages/Colorscheme'));
+const Contact = lazy(() => import('./pages/Contact'));
+const Skills = lazy(() => import('./pages/Skills'));
 
 function App() {
   return (
     <>
       <Header />
-      <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/projects" element={<About />} />
-        <Route path="/colorscheme" element={<Colorscheme />} />
-        <Route path="/contact" element={<Contact />} />
-        <Route path="/skills" element={<Skills />} />
-      </Routes>
+      <Suspense fallback={<div />}>
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/projects" element={<Projects />} />
+          <Route path="/colorscheme" element={<Colorscheme />} />
+          <Route path="/contact" element={<Contact />} />
+          <Route path="/skills" element={<Skills />} />
+        </Routes>
+      </Suspense>
       <Footer />
     </>
 
@@ -25,3 +29,13 @@ function App() {
 }
 
 export default App;
+
+// Nach dem ersten Paint alle anderen Chunks im Hintergrund laden
+if (typeof window !== 'undefined') {
+  window.addEventListener('load', () => {
+    import('./pages/Projects');
+    import('./pages/Skills');
+    import('./pages/Contact');
+    import('./pages/Colorscheme');
+  }, { once: true });
+}

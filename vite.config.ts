@@ -7,6 +7,14 @@ import svgr from 'vite-plugin-svgr'
 export default defineConfig({
   plugins: [react(), tailwindcss(), svgr()],
   build: {
-    sourcemap: false
+    sourcemap: false,
+    rollupOptions: {
+      output: {
+        manualChunks: {
+          'react-vendor': ['react', 'react-dom', 'react-router-dom'],
+          'lottie': ['@lottiefiles/dotlottie-react'],
+        },
+      },
+    },
   }
 })
