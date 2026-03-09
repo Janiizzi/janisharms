@@ -1,0 +1,76 @@
+[
+    {
+        "id": "frontend",
+        "title": "Frontend Development",
+        "description": "Experience in building responsive and user-friendly interfaces using modern frontend technologies.",
+        
+        "skills": [
+        {"id": "react", "title": "React", "description": "This is a paragraph about React", "mapTo": "React"}, 
+
+        {"id": "ts", "title": "TypeScript", "description": "This is a paragraph about TypeScript", "mapTo": "TypeScript"}, 
+
+        {"id": "tailwind", "title": "Tailwind CSS", "description": "This is a paragraph about Tailwind CSS", "mapTo": "Tailwind CSS"}, 
+
+        {"id": "css", "title": "CSS", "description": "This is a paragraph about CSS", "mapTo": "CSS"}, 
+
+        {"id": "js", "title": "JavaScript", "description": "This is a paragraph about JavaScript", "mapTo": "JavaScript"}]
+
+    },
+
+    {
+        "id": "backend",
+        "title": "Backend Development",
+        "description": "Experience in building robust and scalable backend systems using modern technologies.",
+        
+        "skills": [
+
+        {"id": "sql", "title": "Relational Databases", "description": "This is a paragraph about SQL", "mapTo": "SQL"}, 
+
+        {"id": "nodejs", "title": "Node.js", "description": "This is a paragraph about Node.js", "mapTo": "Node.js"},
+        
+        {"id": "python", "title": "Python", "description": "This is a paragraph about Python", "mapTo": "Python"}
+    ]
+    },
+
+    {
+        "id": "design",
+        "title": "Design Tools",
+        "description": "Experience in using design tools to create visually appealing and user-friendly interfaces.",
+        "skills": [
+        
+        {"id": "photoshop", "title": "Adobe Photoshop", "description": "This is a paragraph about Adobe Photoshop", "mapTo": "Photoshop"}, 
+
+        {"id": "illustrator", "title": "Adobe Illustrator", "description": "This is a paragraph about Adobe Illustrator", "mapTo": "Illustrator"}, 
+
+        {"id": "indesign", "title": "Adobe Indesign", "description": "This is a paragraph about Adobe Indesign", "mapTo": "Indesign"}
+    ]
+
+
+    },
+
+    {
+        "id": "languages",
+        "title": "Programming Languages",
+        "description": "Proficiency in various programming languages that are essential for software development.",
+        "skills": [
+        {"id": "java", "title": "Java", "description": "This is a paragraph about Java", "mapTo": "Java"},
+
+        {"id": "python", "title": "Python", "description": "This is a paragraph about Python", "mapTo": "Python"}, 
+
+        {"id": "haskell", "title": "Haskell", "description": "This is a paragraph about Haskell", "mapTo": "Haskell"},
+
+        {"id": "c", "title": "C", "description": "This is a paragraph about C", "mapTo": "C"}]
+    },
+
+    {
+        "id": "other",
+        "title": "Other Skills",
+        "description": "Experience in various other skills that complement my frontend and backend development expertise.",
+        "skills": [
+        
+        {"id": "git", "title": "Git", "description": "This is a paragraph about Git", "mapTo": "Git"}, 
+
+        {"id": "docker", "title": "Docker", "description": "This is a paragraph about Docker", "mapTo": "Docker"}
+    ]
+    }
+]

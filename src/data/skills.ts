@@ -23,7 +23,7 @@ export interface Skill {
 export const skillMap: Record<string, Skill> = {
     "React": {
         name: 'React',
-        path: '#frontend',
+        path: '#react',
         iconUrl: reactIcon
     },
     "Java": {
@@ -38,11 +38,21 @@ export const skillMap: Record<string, Skill> = {
     },
     "TypeScript": {
         name: 'TypeScript',
-        path: '#frontend',
+        path: '#ts',
         iconUrl: tsIcon
     },
     "PostgreSQL": {
         name: 'PostgreSQL',
+        path: '#sql',
+        iconUrl: sqlIcon
+    },
+    "MySQL": {
+        name: 'MySQL',
+        path: '#sql',
+        iconUrl: sqlIcon
+    },
+    "SQL": {
+        name: 'SQL',
         path: '#sql',
         iconUrl: sqlIcon
     },
@@ -53,17 +63,17 @@ export const skillMap: Record<string, Skill> = {
     },
     "Photoshop": {
         name: 'Photoshop',
-        path: '#adobe',
+        path: '#ps',
         iconUrl: psIcon
     },
     "Illustrator": {
         name: 'Illustrator',
-        path: '#adobe',
+        path: '#ai',
         iconUrl: aiIcon
     },
     "Indesign": {
         name: 'Indesign',
-        path: '#adobe',
+        path: '#id',
         iconUrl: idIcon
     },
     "Haskell": {
@@ -73,7 +83,7 @@ export const skillMap: Record<string, Skill> = {
     },
     "Premiere": {
         name: 'Premiere Pro',
-        path: '#adobe',
+        path: '#pr',
         iconUrl: prIcon
     },
     "Git": {
@@ -83,17 +93,22 @@ export const skillMap: Record<string, Skill> = {
     },
     "AfterEffects": {
         name: 'After Effects',
-        path: '#adobe',
+        path: '#ae',
         iconUrl: aeIcon
     },
     "Node.js": {
         name: 'Node.js',
-        path: '#backend',
+        path: '#nodejs',
         iconUrl: ""
     },
     "JavaScript": {
         name: 'JavaScript',
-        path: '#frontend',
+        path: '#js',
         iconUrl: jsIcon
+    },
+    "C": {
+        name: 'C',
+        path: '#c',
+        iconUrl: ""
     }
 }
