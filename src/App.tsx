@@ -8,20 +8,24 @@ const Projects = lazy(() => import('./pages/Projects'));
 const Colorscheme = lazy(() => import('./pages/Colorscheme'));
 const Contact = lazy(() => import('./pages/Contact'));
 const Skills = lazy(() => import('./pages/Skills'));
+const NotFound = lazy(() => import('./pages/NotFound'));
 
 function App() {
   return (
     <>
       <Header />
-      <Suspense fallback={<div />}>
-        <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/projects" element={<Projects />} />
-          <Route path="/colorscheme" element={<Colorscheme />} />
-          <Route path="/contact" element={<Contact />} />
-          <Route path="/skills" element={<Skills />} />
-        </Routes>
-      </Suspense>
+      <main>
+        <Suspense fallback={<div />}>
+          <Routes>
+            <Route path="/" element={<Home />} />
+            <Route path="/projects" element={<Projects />} />
+            <Route path="/colorscheme" element={<Colorscheme />} />
+            <Route path="/contact" element={<Contact />} />
+            <Route path="/skills" element={<Skills />} />
+            <Route path="*" element={<NotFound />} />
+          </Routes>
+        </Suspense>
+      </main>
       <Footer />
     </>
 

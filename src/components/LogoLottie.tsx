@@ -9,6 +9,7 @@ const LogoLottie = () => {
         <Link
             to="/"
             className="justify-self-center"
+            aria-label="Janis Harms – Zur Startseite"
             onMouseEnter={() => {
                 lottieRef.current?.setMode('forward');
                 lottieRef.current?.play();
