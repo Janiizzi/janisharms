@@ -36,6 +36,7 @@ const Projects = () => {
       <Helmet>
         <title>Projects – Janis Harms</title>
         <meta name="description" content="An overview of my projects..." />
+        <link rel="canonical" href="https://janisharms.ch/projects" />
       </Helmet>
 
     </div>
