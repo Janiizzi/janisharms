@@ -72,7 +72,8 @@ const Footer = () => {
         {/* Bottom row */}
         <div className="flex flex-col sm:flex-row items-center justify-between gap-2 text-xs text-primary-grey">
           <span>© {year} Janis Harms. All rights reserved.</span>
-          <span>Built with React &amp; TypeScript</span>
+          <Link to="/privacy" className="hover:text-primary transition-colors duration-200">Privacy Policy</Link>
+          <span>Built with Love &amp; study procrastination</span>
         </div>
 
       </div>
