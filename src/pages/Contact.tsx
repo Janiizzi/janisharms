@@ -26,6 +26,11 @@ const Contact = () => {
         <title>Contact – Janis Harms</title>
         <meta name='description' content='Get in touch with Janis Harms. Send a message directly via the contact form.' />
         <link rel='canonical' href='https://janisharms.ch/contact' />
+        <meta property='og:type' content='website' />
+        <meta property='og:url' content='https://janisharms.ch/contact' />
+        <meta property='og:title' content='Contact – Janis Harms' />
+        <meta property='og:description' content='Get in touch with Janis Harms. Send a message directly via the contact form.' />
+        <meta property='og:image' content='https://janisharms.ch/logo_janis_og.png' />
       </Helmet>
       <OuterCard className='w-full max-w-3xl'>
         <h1 className='text-3xl md:text-4xl font-bold text-primary-white'>

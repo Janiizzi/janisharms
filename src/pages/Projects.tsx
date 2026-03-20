@@ -35,8 +35,13 @@ const Projects = () => {
 
       <Helmet>
         <title>Projects – Janis Harms</title>
-        <meta name="description" content="An overview of my projects..." />
+        <meta name="description" content="A portfolio of projects and design work created throughout my studies at ETH Zürich." />
         <link rel="canonical" href="https://janisharms.ch/projects" />
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="https://janisharms.ch/projects" />
+        <meta property="og:title" content="Projects – Janis Harms" />
+        <meta property="og:description" content="A portfolio of projects and design work created throughout my studies at ETH Zürich." />
+        <meta property="og:image" content="https://janisharms.ch/logo_janis_og.png" />
       </Helmet>
 
     </div>
