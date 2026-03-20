@@ -12,10 +12,10 @@ const NotFound = lazy(() => import('./pages/NotFound'));
 
 function App() {
   return (
-    <>
+    <div className="flex flex-col min-h-screen">
       <Header />
-      <main>
-        <Suspense fallback={<div className="min-h-screen" />}>
+      <main className="flex-1">
+        <Suspense fallback={null}>
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/projects" element={<Projects />} />
@@ -27,8 +27,7 @@ function App() {
         </Suspense>
       </main>
       <Footer />
-    </>
-
+    </div>
   );
 }
 
