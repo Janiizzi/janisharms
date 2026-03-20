@@ -8,13 +8,13 @@ const Home = () => {
     <div className='flex flex-col'>
       <Helmet>
         <title>Janis Harms – Portfolio</title>
-        <meta name="description" content="A personal webpage dedicated to showcasing my projects and the things I learn developing my skillset." />
+        <meta name="description" content="A personal webpage - Exploring projects, experiments, and lessons learned on my journey as a CS Student at ETH Zürich." />
         <link rel="canonical" href="https://janisharms.ch/" />
         <meta property="og:type" content="website" />
         <meta property="og:url" content="https://janisharms.ch/" />
         <meta property="og:title" content="Janis Harms – Portfolio" />
         <meta property="og:image" content="https://janisharms.ch/logo_janis_og.png" />
-        <meta property="og:description" content="A personal webpage dedicated to showcasing my projects and the things I learn developing my skillset." />
+        <meta property="og:description" content="A personal webpage - Exploring projects, experiments, and lessons learned on my journey as a CS Student at ETH Zürich." />
       </Helmet>
       
       <Skills />
