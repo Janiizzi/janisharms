@@ -1,7 +1,10 @@
 import ProjectCard from '../components/CardComponents/ProjectCard';
-import projects from '../data/projects.json';
+import projectsData from '../data/projects.json';
+import type { Project } from '../data/projects';
 import RevealOnView from '../components/RevealOnView';
 import { Helmet } from 'react-helmet-async';
+
+const projects = projectsData as Project[];
 
 const Projects = () => {
   return (
@@ -20,15 +23,7 @@ const Projects = () => {
       <div className='skillmenu grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-3 gap-6 mt-6 mx-4 md:mx-10 max-w-7xl self-center'>
 
         {projects.map((project, index) => (
-          <ProjectCard
-            key={index}
-            title={project.title}
-            description={project.description}
-            imageUrl={project.imageUrl}
-            projectUrl={project.projectUrl}
-            projectIsApp={project.projectIsApp}
-            skills={project.skills}
-          />
+          <ProjectCard key={index} {...project} />
         ))}
 
       </div>

@@ -5,20 +5,12 @@ import { faEye } from '@fortawesome/free-solid-svg-icons';
 import { skillMap } from '../../data/skills';
 import { HashLink } from 'react-router-hash-link';
 import RevealOnView from '../RevealOnView';
-
-interface ProjectCardProps {
-  title: string;
-  description: string;
-  imageUrl: string;
-  projectUrl: string;
-  projectIsApp: string;
-  skills: string[];
-  className?: string;
-}
+import type { Project } from "../../data/projects";
 
 
 
-const ProjectCard = ({ title, description, imageUrl, projectUrl, projectIsApp, skills }: ProjectCardProps) => {
+
+const ProjectCard = ({ title, description, imageUrl, projectUrl, type, skills }: Project) => {
   const [isHovered, setIsHovered] = useState(false);
   const [showAllSkills, setShowAllSkills] = useState(false);
 
@@ -35,7 +27,7 @@ const ProjectCard = ({ title, description, imageUrl, projectUrl, projectIsApp, s
             <div className={`absolute inset-0 transition rounded-lg flex items-center justify-center ${isHovered ? 'bg-black/60' : 'bg-black/20'}`}>
               <div className={`flex items-center align-items gap-2 text-white text-base font-semibold transition-opacity ${isHovered ? 'opacity-100' : 'opacity-0'}`}>
                 <FontAwesomeIcon icon={faEye} />
-                {projectIsApp === 'true' ? 'View Demo' : 'View Design'}
+                {type === 'webapp' || type === 'mobileapp' ? 'View Demo' : 'View Design'}
               </div>
             </div>
           </a>
@@ -75,7 +67,7 @@ const ProjectCard = ({ title, description, imageUrl, projectUrl, projectIsApp, s
         </div>
         <div className='button mt-2'>
           <a href={projectUrl} className='inline-block rounded-lg bg-primary px-4 py-2 font-semibold text-primary-background transition hover:brightness-110'>
-            {projectIsApp === 'true' ? 'View Demo' : 'View Design'}
+            {type === 'webapp' || type === 'mobileapp' ? 'View Demo' : 'View Design'}
           </a>
         </div>
       </OuterCard>

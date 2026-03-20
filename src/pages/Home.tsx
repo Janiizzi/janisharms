@@ -2,6 +2,7 @@ import { Helmet } from 'react-helmet-async';
 import Skills from '../components/SkillMenu.tsx';
 import Spacer from '../components/Spacer.tsx';
 import FolderMenu from '../components/FolderMenu.tsx';
+import Statistics from '../components/Statistics.tsx';
 
 const Home = () => {
   return (
@@ -18,9 +19,11 @@ const Home = () => {
       </Helmet>
       
       <Skills />
-      <Spacer height='h-10' mdHeight='h-14' showLine={true} lineClassName='via-primary-white/20' lineLengthPercent={50} onlySmallScreen={true} />
+      <Statistics />
+      <Spacer height='h-20' mdHeight='h-14' showLine={true} lineClassName='via-primary-white/20' lineLengthPercent={50} onlySmallScreen={true} />
 
       <FolderMenu />
+
 
     </div >
   )

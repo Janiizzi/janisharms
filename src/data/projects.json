@@ -4,7 +4,15 @@
         "description": "A full-stack workflow management platform developed for the Polyball Werkstatt at ETH Zürich. The application enables users to track the progress of painting projects and manage studio space allocation, while a dedicated admin section provides control over user groups and permissions.",
         "imageUrl": "./card-previews/polypaint.png",
         "projectUrl": "https://polypaint.janisharms.ch/home",
-        "projectIsApp": "true",
+        "type": "webapp",
         "skills": ["React", "TypeScript", "Node.js", "PostgreSQL", "Git", "Tailwind CSS"]
+    },
+    {
+        "title": "Vall'doAido - Branding for a Local Business",
+        "description": "For a few years I have been working on the branding for Vall'doAido, a wine seller and online store. This includes the design of websites, menus, flyers, and other marketing materials.",
+        "imageUrl": "",
+        "projectUrl": "",
+        "type": "design",
+        "skills": ["Photoshop", "Illustrator", "InDesign"]
     }
 ]
