@@ -20,6 +20,13 @@ export default defineConfig(({ isSsrBuild }) => ({
           manualChunks: {
             'react-vendor': ['react', 'react-dom', 'react-router-dom'],
             'lottie': ['@lottiefiles/dotlottie-react'],
+            'fontawesome': [
+              '@fortawesome/fontawesome-svg-core',
+              '@fortawesome/free-brands-svg-icons',
+              '@fortawesome/free-regular-svg-icons',
+              '@fortawesome/free-solid-svg-icons',
+              '@fortawesome/react-fontawesome',
+            ],
           },
         },
       },
