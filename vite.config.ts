@@ -4,17 +4,25 @@ import tailwindcss from '@tailwindcss/vite'
 import svgr from 'vite-plugin-svgr'
 
 // https://vite.dev/config/
-export default defineConfig({
+export default defineConfig(({ isSsrBuild }) => ({
   plugins: [react(), tailwindcss(), svgr()],
+  ...(isSsrBuild && {
+    ssr: {
+      external: ['@lottiefiles/dotlottie-react'],
+    },
+  }),
   build: {
+    outDir: isSsrBuild ? 'dist/ssr-server' : 'dist',
     sourcemap: false,
-    rollupOptions: {
-      output: {
-        manualChunks: {
-          'react-vendor': ['react', 'react-dom', 'react-router-dom'],
-          'lottie': ['@lottiefiles/dotlottie-react'],
+    ...(!isSsrBuild && {
+      rollupOptions: {
+        output: {
+          manualChunks: {
+            'react-vendor': ['react', 'react-dom', 'react-router-dom'],
+            'lottie': ['@lottiefiles/dotlottie-react'],
+          },
         },
       },
-    },
-  }
-})
+    }),
+  },
+}))
