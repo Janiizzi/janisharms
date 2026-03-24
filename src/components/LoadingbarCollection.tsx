@@ -14,6 +14,7 @@ const LoadingbarCollection = ({ skillList, maxCount }: LoadingbarCollectionProps
           title={skill.name}
           progress={skill.progress}
           maxCount={maxCount}
+          delayMs={index * 80}
           className=''
         />
       ))}
