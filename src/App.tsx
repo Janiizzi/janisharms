@@ -13,6 +13,7 @@ const Privacy = lazy(() => import('./pages/Privacy'));
 
 function App() {
   return (
+    <>
     <div className="flex flex-col min-h-screen">
       <Header />
       <main className="flex-1">
@@ -28,8 +29,9 @@ function App() {
           </Routes>
         </Suspense>
       </main>
-      <Footer />
     </div>
+      <Footer />
+    </>
   );
 }
 
