@@ -6,6 +6,10 @@ const __dirname = path.dirname(fileURLToPath(import.meta.url))
 
 const routes = ['/', '/skills', '/projects', '/contact', '/privacy']
 
+// Tags that React 19 renders inline but belong in <head>
+const HEAD_TAG_PATTERN =
+  /<title[^>]*>[^<]*<\/title>|<meta [^>]*\/>|<link rel="canonical"[^>]*\/>/g
+
 async function prerender() {
   const { render } = await import('./dist/ssr-server/entry-server.js')
   const template = fs.readFileSync(path.resolve(__dirname, 'dist/index.html'), 'utf-8')
@@ -13,13 +17,30 @@ async function prerender() {
   for (const route of routes) {
     const { html } = render(route)
 
-    let pageHtml = template.replace('<!--app-html-->', html)
+    // Extract all head tags React 19 rendered inside the body
+    const extractedTags = html.match(HEAD_TAG_PATTERN) ?? []
+    // Strip them from the body so they don't appear twice
+    const cleanHtml = html.replace(HEAD_TAG_PATTERN, '')
 
-    // React 19 + react-helmet-async v3: title is rendered inline in the component tree.
-    // Extract it and hoist into <head> so crawlers see the correct title.
-    const titleMatch = html.match(/<title[^>]*>[^<]*<\/title>/)
-    if (titleMatch) {
-      pageHtml = pageHtml.replace(/<title>[^<]*<\/title>/, titleMatch[0])
+    let pageHtml = template.replace('<!--app-html-->', cleanHtml)
+
+    // Inject page-specific title into <head>
+    const title = extractedTags.find(t => t.startsWith('<title'))
+    if (title) {
+      pageHtml = pageHtml.replace(/<title>[^<]*<\/title>/, title)
+    }
+
+    // Replace generic description + og: tags with page-specific ones
+    const descMeta = extractedTags.find(t => t.includes('name="description"'))
+    if (descMeta) {
+      pageHtml = pageHtml.replace(/<meta name="description"[^>]*>/, descMeta)
+    }
+
+    const ogMetas = extractedTags.filter(t => t.includes('property="og:'))
+    const canonical = extractedTags.find(t => t.startsWith('<link rel="canonical"'))
+    if (ogMetas.length > 0) {
+      const replacement = `<!-- Open Graph -->\n    ${ogMetas.join('\n    ')}${canonical ? '\n    ' + canonical : ''}`
+      pageHtml = pageHtml.replace(/<!-- Open Graph -->[\s\S]*?(?=\n[ \t]*<!--|<\/head>)/, replacement + '\n')
     }
 
     const dir = route === '/'
