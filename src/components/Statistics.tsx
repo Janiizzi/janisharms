@@ -13,9 +13,9 @@ const Statistics = () => {
     const designCount = projects.filter((p) => p.type === 'design').length;
 
     return (
-        <div className='flex flex-col max-w-7xl self-center gap-6 w-full px-6 md:px-16 lg:px-32 my-25'>
+        <div className='flex flex-col max-w-7xl self-center gap-6 w-full px-6 md:px-16 lg:px-32 my-10 md:mt-20 md:mb-10'>
             <RevealOnView>
-                <div className='text-3xl md:text-4xl font-bold text-primary-white'>Statistics</div>
+                <div className='text-3xl md:text-4xl font-bold text-primary-white'>Skill Statistics</div>
                 <div className='text-primary-grey text-lg mt-1'>
                     Documented projects: <span className='text-primary not-italic font-semibold'>{projects.length}</span>
                 </div>

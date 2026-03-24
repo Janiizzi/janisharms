@@ -18,18 +18,20 @@ const Skills = () => {
         <meta property='og:image' content='https://janisharms.ch/logo_janis_og.png' />
       </Helmet>
 
-      <Statistics />
       <div className='projects flex flex-col gap-1 align-items-center justify-center text-center mt-6 md:mt-10 mx-4 md:mx-10'>
-          <RevealOnView className='text-3xl md:text-4xl font-bold text-primary-white'>
-            Personal Skills
-          </RevealOnView>
+        <RevealOnView className='text-3xl md:text-4xl font-bold text-primary-white'>
+          Personal Skills
+        </RevealOnView>
 
-          <RevealOnView className='text-primary-grey text-lg font-normal' delayMs={60}>
-            Here are some of the skills I've developed.
-          </RevealOnView>
-        </div>
+        <RevealOnView className='text-primary-grey text-lg font-normal' delayMs={60}>
+          Here are some of the skills I've developed.
+        </RevealOnView>
+      </div>
 
-      
+      <div className='hidden md:flex md:justify-center'>
+        <Statistics />
+      </div>
+
       {skills.map((skillCategory, key) => (
         <SkillCard
           key={key}
@@ -40,4 +42,4 @@ const Skills = () => {
   )
 }
 
-      export default Skills
+export default Skills
