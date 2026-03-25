@@ -2,7 +2,7 @@ import { Fragment, useState } from 'react';
 import OuterCard from './OuterCard';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faEye } from '@fortawesome/free-solid-svg-icons';
-import { skillMap } from '../../data/skills';
+import { getSkillById } from '../../data/skills';
 import { HashLink } from 'react-router-hash-link';
 import RevealOnView from '../RevealOnView';
 import type { Project } from "../../data/projects";
@@ -80,19 +80,33 @@ const ProjectCard = ({ title, description, imageUrl, projectUrl, type, skills }:
             {title}
           </div>
           <div className='flex flex-wrap gap-x-1'>
-            {skills.map((skill, index) => (
-              (showAllSkills || index < 4) ? (
+            {skills.map((skillId, index) => {
+              if (!(showAllSkills || index < 4)) {
+                return null;
+              }
+
+              const skill = getSkillById(skillId);
+              const hasComma = showAllSkills ? index < skills.length - 1 : index < Math.min(skills.length - 1, 3);
+
+              return (
                 <span
                   key={index}
                   className='relative inline-block'
                 >
-                  <HashLink to={`/skills${skillMap[skill]?.path}`} className='text-base text-primary hover:underline transition'>
-                    {skillMap[skill] ? skillMap[skill].name : skill}
-                    {(showAllSkills ? index < skills.length - 1 : index < Math.min(skills.length - 1, 3)) && ','}
-                  </HashLink>
+                  {skill ? (
+                    <HashLink to={`/skills${skill.path}`} className='text-base text-primary hover:underline transition'>
+                      {skill.name}
+                      {hasComma && ','}
+                    </HashLink>
+                  ) : (
+                    <span className='text-base text-primary-grey'>
+                      {skillId}
+                      {hasComma && ','}
+                    </span>
+                  )}
                 </span>
-              ) : null
-            ))}
+              );
+            })}
             {skills.length > 4 && (
               <button
                 onClick={() => setShowAllSkills(prev => !prev)}

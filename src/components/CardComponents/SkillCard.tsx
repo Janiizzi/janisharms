@@ -1,4 +1,4 @@
-import { skillMap } from '../../data/skills.ts'
+import { getSkillById } from '../../data/skills.ts'
 import RevealOnView from '../RevealOnView.tsx'
 
 interface SkillCardProps {
@@ -24,11 +24,11 @@ const SkillCard = ({ id, title, description, skills }: SkillCardProps) => {
             <div className='flex flex-col gap-12'>
                 {skills.map((skill, skillKey) => {
                     const isEven = skillKey % 2 === 0;
-                    const skillEntry = skillMap[skill.mapTo];
+                    const skillEntry = getSkillById(skill.mapTo);
                     const hasAlt = !isEven && !!skillEntry?.iconUrlAlt;
                     return (
                         <RevealOnView key={skill.id} delayMs={skillKey * 60}>
-                            <div id={`${skillMap[skill.mapTo]?.path.replace('#', '')}`} className={`flex items-center gap-4 md:gap-8 scroll-mt-8 ${isEven ? 'flex-row' : 'sm:flex-row-reverse'}`}>
+                            <div id={`${skillEntry?.path?.replace('#', '') ?? skill.id}`} className={`flex items-center gap-4 md:gap-8 scroll-mt-8 ${isEven ? 'flex-row' : 'sm:flex-row-reverse'}`}>
                                 {skillEntry?.iconUrl && (
                                     <>
                                         {/* normal icon: always on mobile, hidden on sm+ when alt exists */}

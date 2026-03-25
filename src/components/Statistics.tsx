@@ -2,6 +2,7 @@ import type { Project } from "../data/projects";
 import projectsData from "../data/projects.json";
 import LoadingbarCollection from './LoadingbarCollection';
 import RevealOnView from './RevealOnView';
+import { getSkillById } from '../data/skills';
 
 const projects = projectsData as Project[];
 
@@ -54,9 +55,9 @@ function prepareSkillList(projects: Project[], ofType: string[]) {
 
     projects.forEach(project => {
         if (ofType.includes(project.type)) {
-            project.skills.forEach((skill: string) => {
-
-                skillMap[skill] = (skillMap[skill] || 0) + 1;
+            project.skills.forEach((skillId: string) => {
+                const skillName = getSkillById(skillId)?.name ?? skillId;
+                skillMap[skillName] = (skillMap[skillName] || 0) + 1;
             });
         }
     });

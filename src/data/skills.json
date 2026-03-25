@@ -6,19 +6,19 @@
         
         "skills": [
         {"id": "react", "title": "React", 
-        "description": "Solid understanding of React's core concepts, including component architecture, state management, hooks, and client-side routing. Applied these skills across multiple projects, most notably in a full-stack platform developed as a semester project. Capable of independently building complete applications, with occasional reference to documentation for setup and deployment configurations.", "mapTo": "React"}, 
+        "description": "Solid understanding of React's core concepts, including component architecture, state management, hooks, and client-side routing. Applied these skills across multiple projects, most notably in a full-stack platform developed as a semester project. Capable of independently building complete applications, with occasional reference to documentation for setup and deployment configurations.", "mapTo": "react"}, 
 
         {"id": "ts", "title": "TypeScript", 
-        "description": "Learned TypeScript from the ground up and apply it consistently across all JavaScript projects. Comfortable defining types and interfaces deliberately to ensure type safety, rather than treating it as an afterthought. TypeScript is the default choice for any new frontend work.", "mapTo": "TypeScript"}, 
+        "description": "Learned TypeScript from the ground up and apply it consistently across all JavaScript projects. Comfortable defining types and interfaces deliberately to ensure type safety, rather than treating it as an afterthought. TypeScript is the default choice for any new frontend work.", "mapTo": "typescript"}, 
 
         {"id": "tailwind", "title": "Tailwind CSS", 
-        "description": "Comfortable in Tailwind CSS, having used it across multiple projects. Comfortable with the full range of utility classes for layout, spacing, typography, and responsiveness. For more complex custom animations, occasional reference to documentation is needed, but day-to-day styling is handled confidently without external guidance.", "mapTo": "Tailwind CSS"}, 
+        "description": "Comfortable in Tailwind CSS, having used it across multiple projects. Comfortable with the full range of utility classes for layout, spacing, typography, and responsiveness. For more complex custom animations, occasional reference to documentation is needed, but day-to-day styling is handled confidently without external guidance.", "mapTo": "tailwindcss"}, 
 
         {"id": "css", "title": "CSS", 
-        "description": "Strong working knowledge of CSS built through consistent use across multiple projects. Comfortable with layouts, flexbox, grid, responsive design, and component-level styling. More intricate animation sequences occasionally require consulting documentation, but the foundational and intermediate skill set is well established.", "mapTo": "CSS"}, 
+        "description": "Strong working knowledge of CSS built through consistent use across multiple projects. Comfortable with layouts, flexbox, grid, responsive design, and component-level styling. More intricate animation sequences occasionally require consulting documentation, but the foundational and intermediate skill set is well established.", "mapTo": "css"}, 
 
         {"id": "js", "title": "JavaScript", 
-        "description": "Solid grasp of modern JavaScript, acquired through a Web Engineering course and applied in subsequent projects. Comfortable with ES6+ syntax, asynchronous patterns, DOM manipulation, and working within frontend frameworks. TypeScript is now the preferred environment for new work.", "mapTo": "JavaScript"}]
+        "description": "Solid grasp of modern JavaScript, acquired through a Web Engineering course and applied in subsequent projects. Comfortable with ES6+ syntax, asynchronous patterns, DOM manipulation, and working within frontend frameworks. TypeScript is now the preferred environment for new work.", "mapTo": "javascript"}]
 
     },
 
@@ -29,11 +29,11 @@
         
         "skills": [
 
-        {"id": "sql", "title": "Relational Databases", "description": "Formal coursework in relational database systems, covering SQL, schema design, and query optimisation. Applied this knowledge practically using PostgreSQL in a full-stack semester project, where the database underpinned a workflow management platform for a real-world client.", "mapTo": "SQL"}, 
+        {"id": "sql", "title": "Relational Databases", "description": "Formal coursework in relational database systems, covering SQL, schema design, and query optimisation. Applied this knowledge practically using PostgreSQL in a full-stack semester project, where the database underpinned a workflow management platform for a real-world client.", "mapTo": "sql"}, 
 
-        {"id": "nodejs", "title": "Node.js", "description": "Hands-on experience with Node.js through two projects, gaining familiarity with its runtime environment, package ecosystem, and building simple server-side logic. Solid conceptual understanding of its event-driven architecture, though most backend work to date has been primarily in Python.", "mapTo": "Node.js"},
+        {"id": "nodejs", "title": "Node.js", "description": "Hands-on experience with Node.js through two projects, gaining familiarity with its runtime environment, package ecosystem, and building simple server-side logic. Solid conceptual understanding of its event-driven architecture, though most backend work to date has been primarily in Python.", "mapTo": "nodejs"},
         
-        {"id": "python", "title": "Python", "description": "Solid experience with Python across multiple contexts. Used it in a dedicated programming course, in Numerical Methods (covering topics such as numerical integration, linear algebra, root-finding algorithms as well as machine learning), and as the primary backend language in a full-stack semester project using FastAPI. Comfortable building APIs, implementing algorithms, and working with scientific computing libraries.", "mapTo": "Python"}
+        {"id": "python", "title": "Python", "description": "Solid experience with Python across multiple contexts. Used it in a dedicated programming course, in Numerical Methods (covering topics such as numerical integration, linear algebra, root-finding algorithms as well as machine learning), and as the primary backend language in a full-stack semester project using FastAPI. Comfortable building APIs, implementing algorithms, and working with scientific computing libraries.", "mapTo": "python"}
     ]
     },
 
@@ -44,13 +44,13 @@
         "skills": [
         
         {"id": "photoshop", "title": "Adobe Photoshop", 
-        "description": "Self-taught Photoshop user with several years of practical experience. Developed skills through independent projects and an ongoing habit of following tutorials to expand technique. Comfortable with photo editing, compositing, and producing digital assets for use in web and design projects.", "mapTo": "Photoshop"}, 
+        "description": "Self-taught Photoshop user with several years of practical experience. Developed skills through independent projects and an ongoing habit of following tutorials to expand technique. Comfortable with photo editing, compositing, and producing digital assets for use in web and design projects.", "mapTo": "photoshop"}, 
 
         {"id": "illustrator", "title": "Adobe Illustrator", 
-        "description": "Self-taught in Adobe Illustrator, with experience in vector illustration, icon design, and producing scalable graphics for digital and print use. Skills developed independently through project work and regular engagement with tutorial resources.", "mapTo": "Illustrator"}, 
+        "description": "Self-taught in Adobe Illustrator, with experience in vector illustration, icon design, and producing scalable graphics for digital and print use. Skills developed independently through project work and regular engagement with tutorial resources.", "mapTo": "illustrator"}, 
 
         {"id": "indesign", "title": "Adobe InDesign", 
-        "description": "Self-taught in Adobe InDesign, with practical experience in layout design for multi-page documents. Comfortable with typesetting, grid-based layouts, and preparing files for both print and digital distribution. Skills developed through independent practice and tutorial-driven learning.", "mapTo": "InDesign"}
+        "description": "Self-taught in Adobe InDesign, with practical experience in layout design for multi-page documents. Comfortable with typesetting, grid-based layouts, and preparing files for both print and digital distribution. Skills developed through independent practice and tutorial-driven learning.", "mapTo": "indesign"}
     ]
 
 
@@ -62,16 +62,16 @@
         "description": "Formal training in several programming languages through dedicated courses at ETH Zürich, providing a broad foundation across paradigms including imperative, object-oriented, and functional programming.",
         "skills": [
         {"id": "java", "title": "Java", 
-        "description": "Completed a full semester of Java programming, covering object-oriented design principles, data structures, and core language concepts. Gained a solid understanding of the language's type system, class hierarchy, and standard library through structured coursework and programming exercises.", "mapTo": "Java"},
+        "description": "Completed a full semester of Java programming, covering object-oriented design principles, data structures, and core language concepts. Gained a solid understanding of the language's type system, class hierarchy, and standard library through structured coursework and programming exercises.", "mapTo": "java"},
 
         {"id": "python", "title": "Python", 
-        "description": "Solid experience with Python across multiple courses and projects, including a dedicated programming course, Numerical Methods, and a full-stack semester project where Python served as the backend language via FastAPI. Comfortable with a wide range of applications from algorithm implementation to API development.", "mapTo": "Python"}, 
+        "description": "Solid experience with Python across multiple courses and projects, including a dedicated programming course, Numerical Methods, and a full-stack semester project where Python served as the backend language via FastAPI. Comfortable with a wide range of applications from algorithm implementation to API development.", "mapTo": "python"}, 
 
         {"id": "haskell", "title": "Haskell", 
-        "description": "Completed a semester-long course in Haskell, developing skills in functional programming concepts including pure functions, immutability, type inference, higher-order functions, and monads. The course provided a strong theoretical perspective on programming that has informed work in other languages.", "mapTo": "Haskell"},
+        "description": "Completed a semester-long course in Haskell, developing skills in functional programming concepts including pure functions, immutability, type inference, higher-order functions, and monads. The course provided a strong theoretical perspective on programming that has informed work in other languages.", "mapTo": "haskell"},
 
         {"id": "c", "title": "C", 
-        "description": "Completed a full semester in C programming, covering low-level programming concepts including memory management, pointers, and systems-level thinking. The course provided a strong foundation in understanding how software interacts with hardware, complementing higher-level language experience.", "mapTo": "C"}]
+        "description": "Completed a full semester in C programming, covering low-level programming concepts including memory management, pointers, and systems-level thinking. The course provided a strong foundation in understanding how software interacts with hardware, complementing higher-level language experience.", "mapTo": "c"}]
     },
 
     {
@@ -81,10 +81,10 @@
         "skills": [
         
         {"id": "git", "title": "Git", 
-        "description": "Comfortable with Git for both individual and collaborative development. Experienced with branching workflows, pull requests, and code reviews as practised in team projects. Handles day-to-day version control independently, with occasional reference to documentation for more advanced operations.", "mapTo": "Git"}, 
+        "description": "Comfortable with Git for both individual and collaborative development. Experienced with branching workflows, pull requests, and code reviews as practised in team projects. Handles day-to-day version control independently, with occasional reference to documentation for more advanced operations.", "mapTo": "git"}, 
 
         {"id": "docker", "title": "Docker", 
-        "description": "Conceptual understanding of containerisation and how Docker is used to package and deploy applications. Applied Docker in the context of deploying full-stack and frontend applications to a personal VPS, working with Dockerfiles and Compose configurations. More complex setups are approached with reference to documentation or AI-assisted tooling.", "mapTo": "Docker"}
+        "description": "Conceptual understanding of containerisation and how Docker is used to package and deploy applications. Applied Docker in the context of deploying full-stack and frontend applications to a personal VPS, working with Dockerfiles and Compose configurations. More complex setups are approached with reference to documentation or AI-assisted tooling.", "mapTo": "docker"}
     ]
     }
 ]

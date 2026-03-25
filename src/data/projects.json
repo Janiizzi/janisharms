@@ -5,7 +5,7 @@
         "imageUrl": "/card-previews/polypaint.png",
         "projectUrl": "https://polypaint.janisharms.ch/home",
         "type": "webapp",
-        "skills": ["React", "TypeScript", "Node.js", "PostgreSQL", "Git", "Tailwind CSS"]
+        "skills": ["react", "typescript", "nodejs", "postgresql", "git", "tailwindcss"]
     },
     {
         "title": "Vall'doAido - Branding for a Local Business",
@@ -13,7 +13,7 @@
         "imageUrl": "",
         "projectUrl": "",
         "type": "design",
-        "skills": ["Photoshop", "Illustrator", "InDesign"]
+        "skills": ["photoshop", "illustrator", "indesign"]
     },
     {
         "title": "Skischool Event raffle - Web Application",
@@ -21,6 +21,6 @@
         "imageUrl": "/card-previews/skimuerren.png",
         "projectUrl": "https://demo-skimuerren.janisharms.ch",
         "type": "webapp",
-        "skills": ["React", "TypeScript", "Tailwind CSS", "Git", "Next.js"]
+        "skills": ["react", "typescript", "tailwindcss", "git", "nextjs"]
     }
 ]

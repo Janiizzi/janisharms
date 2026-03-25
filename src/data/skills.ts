@@ -35,127 +35,137 @@ export interface Skill {
     iconUrlAlt?: string;
 }
 
-export const skillMap: Record<string, Skill> = {
-    "Tailwind CSS": {
+export const skillsById = {
+    tailwindcss: {
         name: 'Tailwind CSS',
         path: '#tailwind',
         iconUrl: ""
     },
-    "CSS": {
+    css: {
         name: 'CSS',
         path: '#css',
         iconUrl: ""
     },
-    "Next.js": {
+    nextjs: {
         name: 'Next.js',
         path: '#nextjs',
         iconUrl: "",
         iconUrlAlt: ""
     },
-    "React": {
+    react: {
         name: 'React',
         path: '#react',
         iconUrl: reactIcon,
         iconUrlAlt: reactIconL
     },
-    "Java": {
+    java: {
         name: 'Java',
         path: '#java',
         iconUrl: javaIcon,
         iconUrlAlt: javaIconL
     },
-    "Python": {
+    python: {
         name: 'Python',
         path: '#python',
         iconUrl: pythonIcon,
         iconUrlAlt: pythonIconL
     },
-    "TypeScript": {
+    typescript: {
         name: 'TypeScript',
         path: '#ts',
         iconUrl: tsIcon,
         iconUrlAlt: tsIconL
     },
-    "PostgreSQL": {
+    postgresql: {
         name: 'PostgreSQL',
         path: '#sql',
         iconUrl: sqlIcon,
         iconUrlAlt: sqlIconL
     },
-    "MySQL": {
+    mysql: {
         name: 'MySQL',
         path: '#sql',
         iconUrl: sqlIcon,
         iconUrlAlt: sqlIconL
     },
-    "SQL": {
+    sql: {
         name: 'SQL',
         path: '#sql',
         iconUrl: sqlIcon,
         iconUrlAlt: sqlIconL
     },
-    "Docker": {
+    docker: {
         name: 'Docker',
         path: '#docker',
         iconUrl: dockerIcon,
         iconUrlAlt: dockerIconL
     },
-    "Photoshop": {
+    photoshop: {
         name: 'Photoshop',
         path: '#ps',
         iconUrl: psIcon,
         iconUrlAlt: psIconL
     },
-    "Illustrator": {
+    illustrator: {
         name: 'Illustrator',
         path: '#ai',
         iconUrl: aiIcon,
         iconUrlAlt: aiIconL
     },
-    "InDesign": {
+    indesign: {
         name: 'InDesign',
         path: '#id',
         iconUrl: idIcon,
         iconUrlAlt: idIconL
     },
-    "Haskell": {
+    haskell: {
         name: 'Haskell',
         path: '#haskell',
         iconUrl: haskellIcon,
         iconUrlAlt: haskellIconL
     },
-    "Premiere": {
+    premiere: {
         name: 'Premiere Pro',
         path: '#pr',
         iconUrl: prIcon,
         iconUrlAlt: prIconL
     },
-    "Git": {
+    git: {
         name: 'Git',
         path: '#git',
         iconUrl: gitIcon,
         iconUrlAlt: gitIconL
     },
-    "AfterEffects": {
+    aftereffects: {
         name: 'After Effects',
         path: '#ae',
         iconUrl: aeIcon,
         iconUrlAlt: aeIconL
     },
-    "Node.js": {
+    nodejs: {
         name: 'Node.js',
         path: '#nodejs',
         iconUrl: ""
     },
-    "JavaScript": {
+    javascript: {
         name: 'JavaScript',
         path: '#js',
         iconUrl: jsIcon,
         iconUrlAlt: jsIconL
     },
-    "C": {
+    c: {
         name: 'C',
         path: '#c',
         iconUrl: ""
     }
-}
+} satisfies Record<string, Skill>;
+
+export type SkillId = keyof typeof skillsById;
+
+export const getSkillById = (skillId: string): Skill | undefined => {
+    return skillsById[skillId as SkillId];
+};
+
+export const isSkillId = (value: string): value is SkillId => {
+    return value in skillsById;
+};
