@@ -61,12 +61,12 @@ const ProjectCard = ({ title, description, imageUrl, projectUrl, type, skills }:
     <RevealOnView className='w-full'>
       <OuterCard className={`flex flex-col gap-2 h-full`}>
         <div
-          className='picture-holder relative rounded-lg overflow-hidden'
+          className='picture-holder relative rounded-lg overflow-hidden h-50'
           onMouseEnter={() => setIsHovered(true)}
           onMouseLeave={() => setIsHovered(false)}
         >
           <a href={projectUrl} target='_blank' rel='noopener noreferrer'>
-            <img src={imageUrl} alt={title} className='rounded-lg' />
+            <img src={imageUrl} alt={title} className='rounded-lg w-full h-full object-cover object-center' />
             <div className={`absolute inset-0 transition rounded-lg flex items-center justify-center ${isHovered ? 'bg-black/60' : 'bg-black/20'}`}>
               <div className={`flex items-center align-items gap-2 text-white text-base font-semibold transition-opacity ${isHovered ? 'opacity-100' : 'opacity-0'}`}>
                 <FontAwesomeIcon icon={faEye} />
