@@ -39,7 +39,7 @@ const renderDescriptionWithLinks = (text: string) => {
           href={part.href}
           target='_blank'
           rel='noopener noreferrer'
-          className='text-primary hover:underline'
+          className='text-white/90 hover:underline'
         >
           {part.value}
         </a>

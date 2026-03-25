@@ -49,8 +49,8 @@
         {"id": "illustrator", "title": "Adobe Illustrator", 
         "description": "Self-taught in Adobe Illustrator, with experience in vector illustration, icon design, and producing scalable graphics for digital and print use. Skills developed independently through project work and regular engagement with tutorial resources.", "mapTo": "Illustrator"}, 
 
-        {"id": "indesign", "title": "Adobe Indesign", 
-        "description": "Self-taught in Adobe InDesign, with practical experience in layout design for multi-page documents. Comfortable with typesetting, grid-based layouts, and preparing files for both print and digital distribution. Skills developed through independent practice and tutorial-driven learning.", "mapTo": "Indesign"}
+        {"id": "indesign", "title": "Adobe InDesign", 
+        "description": "Self-taught in Adobe InDesign, with practical experience in layout design for multi-page documents. Comfortable with typesetting, grid-based layouts, and preparing files for both print and digital distribution. Skills developed through independent practice and tutorial-driven learning.", "mapTo": "InDesign"}
     ]
 
 

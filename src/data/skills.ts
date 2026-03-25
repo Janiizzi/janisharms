@@ -36,6 +36,22 @@ export interface Skill {
 }
 
 export const skillMap: Record<string, Skill> = {
+    "Tailwind CSS": {
+        name: 'Tailwind CSS',
+        path: '#tailwind',
+        iconUrl: ""
+    },
+    "CSS": {
+        name: 'CSS',
+        path: '#css',
+        iconUrl: ""
+    },
+    "Next.js": {
+        name: 'Next.js',
+        path: '#nextjs',
+        iconUrl: "",
+        iconUrlAlt: ""
+    },
     "React": {
         name: 'React',
         path: '#react',
@@ -96,8 +112,8 @@ export const skillMap: Record<string, Skill> = {
         iconUrl: aiIcon,
         iconUrlAlt: aiIconL
     },
-    "Indesign": {
-        name: 'Indesign',
+    "InDesign": {
+        name: 'InDesign',
         path: '#id',
         iconUrl: idIcon,
         iconUrlAlt: idIconL

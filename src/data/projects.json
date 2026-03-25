@@ -14,5 +14,13 @@
         "projectUrl": "",
         "type": "design",
         "skills": ["Photoshop", "Illustrator", "InDesign"]
+    },
+    {
+        "title": "Skischool Event raffle - Web Application",
+        "description": "A web application for managing raffles for skischool events and competitions built specifically for the [Skischool Mürren](https://skischule-muerren.ch).",
+        "imageUrl": "/card-previews/skimuerren.png",
+        "projectUrl": "https://demo-skimuerren.janisharms.ch",
+        "type": "webapp",
+        "skills": ["React", "TypeScript", "Tailwind CSS", "Git", "Next.js"]
     }
 ]
