@@ -8,6 +8,7 @@ const Projects = lazy(() => import('./pages/Projects'));
 const Colorscheme = lazy(() => import('./pages/Colorscheme'));
 const Contact = lazy(() => import('./pages/Contact'));
 const Skills = lazy(() => import('./pages/Skills'));
+const InConstruction = lazy(() => import('./pages/InConstruction'));
 const NotFound = lazy(() => import('./pages/NotFound'));
 const Privacy = lazy(() => import('./pages/Privacy'));
 
@@ -24,6 +25,7 @@ function App() {
             <Route path="/colorscheme" element={<Colorscheme />} />
             <Route path="/contact" element={<Contact />} />
             <Route path="/skills" element={<Skills />} />
+            <Route path="/in-construction" element={<InConstruction />} />
             <Route path="/privacy" element={<Privacy />} />
             <Route path="*" element={<NotFound />} />
           </Routes>
