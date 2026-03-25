@@ -1,10 +1,37 @@
+import { useEffect } from 'react';
 import { Helmet } from 'react-helmet-async';
+import { useLocation } from 'react-router-dom';
 import SkillCard from "../components/CardComponents/SkillCard"
 import skills from "../data/skills.json"
 import RevealOnView from "../components/RevealOnView";
 import Statistics from '../components/Statistics';
 
 const Skills = () => {
+  const location = useLocation();
+
+  useEffect(() => {
+    if (!location.hash) return;
+
+    const targetId = decodeURIComponent(location.hash.slice(1));
+    let attempts = 0;
+
+    const tryScroll = () => {
+      const target = document.getElementById(targetId);
+
+      if (target) {
+        target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        return;
+      }
+
+      attempts += 1;
+      if (attempts < 10) {
+        window.requestAnimationFrame(tryScroll);
+      }
+    };
+
+    tryScroll();
+  }, [location.hash]);
+
   return (
     <div className='skills-page flex flex-col [&>*:last-child]:mb-16'>
       <Helmet>

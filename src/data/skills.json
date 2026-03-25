@@ -50,7 +50,13 @@
         "description": "Self-taught in Adobe Illustrator, with experience in vector illustration, icon design, and producing scalable graphics for digital and print use. Skills developed independently through project work and regular engagement with tutorial resources.", "mapTo": "illustrator"}, 
 
         {"id": "indesign", "title": "Adobe InDesign", 
-        "description": "Self-taught in Adobe InDesign, with practical experience in layout design for multi-page documents. Comfortable with typesetting, grid-based layouts, and preparing files for both print and digital distribution. Skills developed through independent practice and tutorial-driven learning.", "mapTo": "indesign"}
+        "description": "Self-taught in Adobe InDesign, with practical experience in layout design for multi-page documents. Comfortable with typesetting, grid-based layouts, and preparing files for both print and digital distribution. Skills developed through independent practice and tutorial-driven learning.", "mapTo": "indesign"},
+
+        {"id": "premiere", "title": "Adobe Premiere Pro",
+        "description": "Practical experience in Adobe Premiere Pro for editing short-form videos, social clips, and project reels. Comfortable with timeline editing, basic color correction, transitions, audio cleanup, and export workflows for web delivery.", "mapTo": "premiere"},
+
+        {"id": "aftereffects", "title": "Adobe After Effects",
+        "description": "Working knowledge of Adobe After Effects for motion graphics and compositing. Comfortable with keyframes, shape layers, masks, and simple title/intro animations to support web and media projects.", "mapTo": "aftereffects"}
     ]
 
 

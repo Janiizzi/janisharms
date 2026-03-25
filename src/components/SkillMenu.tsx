@@ -1,9 +1,66 @@
-import { useRef } from 'react';
+import { useEffect, useRef } from 'react';
 import SkillsGraphic from '../assets/skills.svg?react';
 import './SkillMenu.css';
+import { useNavigate } from 'react-router-dom';
 
 const Skills = () => {
 	const svgContainerRef = useRef<HTMLDivElement | null>(null);
+	const navigate = useNavigate();
+
+	useEffect(() => {
+		const container = svgContainerRef.current;
+		if (!container) return;
+
+		const iconTargetMap: Record<string, string> = {
+			icon1: 'python',
+			icon2: 'java',
+			icon3: 'haskell',
+			icon4: 'sql',
+			icon5: 'git',
+			icon6: 'react',
+			icon7: 'docker',
+			icon8: 'id',
+			icon9: 'pr',
+			icon10: 'ae',
+			icon11: 'ps',
+			icon12: 'ai',
+		};
+
+		const cleanupFns: Array<() => void> = [];
+
+		Object.entries(iconTargetMap).forEach(([iconClass, anchorId]) => {
+			const iconNodes = container.querySelectorAll<SVGGElement>(`.shadow.${iconClass}`);
+
+			iconNodes.forEach((node) => {
+				node.style.cursor = 'pointer';
+
+				const handleClick = () => {
+					navigate(`/skills#${anchorId}`);
+				};
+
+				const handleKeyDown = (event: KeyboardEvent) => {
+					if (event.key === 'Enter' || event.key === ' ') {
+						event.preventDefault();
+						handleClick();
+					}
+				};
+
+				node.setAttribute('role', 'link');
+				node.setAttribute('tabindex', '0');
+				node.addEventListener('click', handleClick);
+				node.addEventListener('keydown', handleKeyDown);
+
+				cleanupFns.push(() => {
+					node.removeEventListener('click', handleClick);
+					node.removeEventListener('keydown', handleKeyDown);
+				});
+			});
+		});
+
+		return () => {
+			cleanupFns.forEach((cleanup) => cleanup());
+		};
+	}, [navigate]);
 
 	return (
 		<div className='flex flex-row md:items-center justify-around space-around items-start gap-2 p-[10vw] flex-wrap md:pt-[15vh]'>
