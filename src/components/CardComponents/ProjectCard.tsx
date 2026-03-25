@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { Fragment, useState } from 'react';
 import OuterCard from './OuterCard';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faEye } from '@fortawesome/free-solid-svg-icons';
@@ -6,6 +6,49 @@ import { skillMap } from '../../data/skills';
 import { HashLink } from 'react-router-hash-link';
 import RevealOnView from '../RevealOnView';
 import type { Project } from "../../data/projects";
+
+const renderDescriptionWithLinks = (text: string) => {
+  const linkRegex = /\[([^\]]+)\]\((https?:\/\/[^\s)]+)\)/g;
+  const parts: Array<{ type: 'text' | 'link'; value: string; href?: string }> = [];
+  let lastIndex = 0;
+  let match = linkRegex.exec(text);
+
+  while (match) {
+    if (match.index > lastIndex) {
+      parts.push({ type: 'text', value: text.slice(lastIndex, match.index) });
+    }
+
+    parts.push({ type: 'link', value: match[1], href: match[2] });
+    lastIndex = match.index + match[0].length;
+    match = linkRegex.exec(text);
+  }
+
+  if (lastIndex < text.length) {
+    parts.push({ type: 'text', value: text.slice(lastIndex) });
+  }
+
+  if (parts.length === 0) {
+    return text;
+  }
+
+  return parts.map((part, index) => {
+    if (part.type === 'link' && part.href) {
+      return (
+        <a
+          key={`link-${index}`}
+          href={part.href}
+          target='_blank'
+          rel='noopener noreferrer'
+          className='text-primary hover:underline'
+        >
+          {part.value}
+        </a>
+      );
+    }
+
+    return <Fragment key={`text-${index}`}>{part.value}</Fragment>;
+  });
+};
 
 
 
@@ -62,7 +105,7 @@ const ProjectCard = ({ title, description, imageUrl, projectUrl, type, skills }:
 
 
           <div className='description text-primary-grey flex-1 mt-2'>
-            {description}
+            {renderDescriptionWithLinks(description)}
           </div>
         </div>
         <div className='button mt-2'>
