@@ -33,7 +33,7 @@ const Statistics = () => {
                             <span className='text-primary font-bold'>{appCount}</span>
                         </div>
                     </RevealOnView>
-                    <LoadingbarCollection skillList={skillListApplications} maxCount={skillListApplications.length} />
+                    <LoadingbarCollection skillList={skillListApplications} maxCount={appCount} />
                 </div>
 
                 <div className='flex flex-col gap-2 flex-1'>
@@ -43,7 +43,7 @@ const Statistics = () => {
                             <span className='text-primary font-bold'>{designCount}</span>
                         </div>
                     </RevealOnView>
-                    <LoadingbarCollection skillList={skillListDesigns} maxCount={skillListDesigns.length} />
+                    <LoadingbarCollection skillList={skillListDesigns} maxCount={designCount} />
                 </div>
             </div>
         </div>
