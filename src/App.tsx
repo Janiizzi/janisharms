@@ -15,10 +15,10 @@ const Privacy = lazy(() => import('./pages/Privacy'));
 function App() {
   return (
     <>
-    <div className="flex flex-col min-h-screen">
+    <div className="flex min-h-screen flex-col bg-primary-background">
       <Header />
       <main className="flex-1">
-        <Suspense fallback={null}>
+        <Suspense fallback={<div className="min-h-[60vh] bg-primary-background" />}>
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/projects" element={<Projects />} />

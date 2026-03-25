@@ -32,6 +32,17 @@ html {
   scroll-behavior: smooth;
 }
 
+html,
+body,
+#root {
+  min-height: 100%;
+  background-color: var(--primary-background);
+}
+
+body {
+  margin: 0;
+}
+
 @keyframes typewriterLineReveal {
   from {
     clip-path: inset(0 100% 0 0);

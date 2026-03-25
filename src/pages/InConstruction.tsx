@@ -14,12 +14,9 @@ const InConstruction = ({
   backLabel = 'Back to Home',
 }: InConstructionProps) => {
   return (
-    <section className="min-h-[72vh] bg-primary-background px-6 py-16 md:px-10">
+    <section className="min-h-[72vh] px-6 py-16 md:px-10">
       <div className="mx-auto grid max-w-5xl items-center gap-10 rounded-3xl bg-primary-background p-8 md:grid-cols-2 md:p-12">
         <div>
-          <p className="inline-flex rounded-full border border-primary/40 bg-primary/10 px-4 py-1 text-xs font-semibold uppercase tracking-[0.22em] text-primary-light">
-            Site Upgrade In Progress
-          </p>
 
           <h1 className="mt-5 text-4xl font-black uppercase tracking-[0.08em] text-primary-white md:text-5xl">
             {title}
