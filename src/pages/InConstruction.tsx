@@ -1,3 +1,4 @@
+import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
 
 type InConstructionProps = {
@@ -15,6 +16,10 @@ const InConstruction = ({
 }: InConstructionProps) => {
   return (
     <section className="min-h-[72vh] px-6 py-16 md:px-10">
+      <Helmet>
+        <title>Under Construction – Janis Harms</title>
+        <meta name="robots" content="noindex" />
+      </Helmet>
       <div className="mx-auto grid max-w-5xl items-center gap-10 rounded-3xl bg-primary-background p-8 md:grid-cols-2 md:p-12">
         <div>
 

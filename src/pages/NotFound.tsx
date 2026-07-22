@@ -7,6 +7,7 @@ const NotFound = () => {
     <div className='flex flex-col items-center justify-center text-center mt-16 md:mt-24 mx-4 mb-16'>
       <Helmet>
         <title>404 – Janis Harms</title>
+        <meta name='robots' content='noindex' />
       </Helmet>
 
       <RevealOnView className='text-8xl md:text-9xl font-bold text-primary-white/10 select-none'>

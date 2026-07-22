@@ -9,6 +9,9 @@ import Projects from './pages/Projects'
 import Skills from './pages/Skills'
 import Contact from './pages/Contact'
 import Privacy from './pages/Privacy'
+import InConstruction from './pages/InConstruction'
+import Colorscheme from './pages/Colorscheme'
+import NotFound from './pages/NotFound'
 
 export function render(url: string) {
   const helmetContext: Record<string, unknown> = {}
@@ -25,6 +28,9 @@ export function render(url: string) {
               <Route path="/skills" element={<Skills />} />
               <Route path="/contact" element={<Contact />} />
               <Route path="/privacy" element={<Privacy />} />
+              <Route path="/in-construction" element={<InConstruction />} />
+              <Route path="/colorscheme" element={<Colorscheme />} />
+              <Route path="*" element={<NotFound />} />
             </Routes>
           </main>
         </div>

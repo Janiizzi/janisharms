@@ -7,6 +7,7 @@ const Privacy = () => {
       <Helmet>
         <title>Privacy Policy – Janis Harms</title>
         <meta name='robots' content='noindex' />
+        <link rel='canonical' href='https://janisharms.ch/privacy' />
       </Helmet>
       <OuterCard className='w-full max-w-3xl'>
         <h1 className='text-3xl md:text-4xl font-bold text-primary-white'>Privacy Policy</h1>
