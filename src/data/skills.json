@@ -33,7 +33,11 @@
 
         {"id": "nodejs", "title": "Node.js", "description": "Hands-on experience with Node.js through two projects, gaining familiarity with its runtime environment, package ecosystem, and building simple server-side logic. Solid conceptual understanding of its event-driven architecture, though most backend work to date has been primarily in Python.", "mapTo": "nodejs"},
         
-        {"id": "python", "title": "Python", "description": "Solid experience with Python across multiple contexts. Used it in a dedicated programming course, in Numerical Methods (covering topics such as numerical integration, linear algebra, root-finding algorithms as well as machine learning), and as the primary backend language in a full-stack semester project using FastAPI. Comfortable building APIs, implementing algorithms, and working with scientific computing libraries.", "mapTo": "python"}
+        {"id": "python", "title": "Python", "description": "Solid experience with Python across multiple contexts. Used it in a dedicated programming course, in Numerical Methods (covering topics such as numerical integration, linear algebra, root-finding algorithms as well as machine learning), and as the primary backend language in a full-stack semester project using FastAPI. Comfortable building APIs, implementing algorithms, and working with scientific computing libraries.", "mapTo": "python"},
+
+        {"id": "php", "title": "PHP", "description": "Practical experience with PHP through building a custom WordPress theme from scratch for a client project. Comfortable working without a framework, structuring template hierarchies, and writing server-rendered logic that runs directly on shared hosting without a build step.", "mapTo": "php"},
+
+        {"id": "wordpress", "title": "WordPress", "description": "Experience building a fully custom WordPress theme from the ground up, rather than relying on a page builder. Comfortable with the template hierarchy, custom post types and fields, the plugin ecosystem, and structuring content models for real-world client needs such as multi-axis blog taxonomies and local SEO schema.", "mapTo": "wordpress"}
     ]
     },
 

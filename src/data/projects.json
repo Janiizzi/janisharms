@@ -22,5 +22,13 @@
         "projectUrl": "https://demo-skimuerren.janisharms.ch",
         "type": "webapp",
         "skills": ["react", "typescript", "tailwindcss", "git", "nextjs"]
+    },
+    {
+        "title": "Praxis Andreas Meyer - Website for a Manual Therapist",
+        "description": "A custom WordPress theme built from scratch for a manual therapy practice in Hägendorf, Switzerland. Features a two-axis content architecture for the blog (symptom area × content type), a self-built therapy finder, scroll-driven animations, and a fully custom LocalBusiness/FAQ schema for local SEO — no page builder, no build step required on the server.",
+        "imageUrl": "/card-previews/praxis-andreasmeyer.png",
+        "projectUrl": "in-construction",
+        "type": "webapp",
+        "skills": ["wordpress", "php", "tailwindcss", "javascript", "css", "git"]
     }
 ]
