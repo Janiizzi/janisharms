@@ -35,7 +35,7 @@ const noise = (seed: number) => {
 type DataAssemblyProps = { accent: string };
 
 const DataAssembly = ({ accent }: DataAssemblyProps) => {
-  const { ref, progress } = useScrollProgress<HTMLDivElement>({ start: 1.05, end: 0.12 });
+  const { ref, progress } = useScrollProgress<HTMLDivElement>({ start: 1.05, end: 0.02 });
 
   const columns = useMemo(
     () =>
@@ -46,9 +46,11 @@ const DataAssembly = ({ accent }: DataAssemblyProps) => {
     []
   );
 
-  // The prose gives way first, then the fields settle, then the frame appears.
-  const proseOut = range(progress, 0.05, 0.55);
-  const frameIn = easeOut(range(progress, 0.6, 1));
+  // The prose holds for the first third, so the old hand-written block is
+  // readable before anything starts moving; then the fields settle and the
+  // column headers arrive last.
+  const proseOut = range(progress, 0.3, 0.72);
+  const frameIn = easeOut(range(progress, 0.68, 1));
 
   let chipIndex = 0;
 
@@ -82,7 +84,7 @@ const DataAssembly = ({ accent }: DataAssemblyProps) => {
             {group.fields.map(field => {
               const seed = chipIndex++;
               // Each chip starts somewhere else and arrives slightly after the last.
-              const settle = easeOut(range(progress, Math.min(0.55, seed * 0.03), 0.97));
+              const settle = easeOut(range(progress, 0.32 + Math.min(0.3, seed * 0.028), 0.99));
               const away = 1 - settle;
               const dx = (noise(seed + 1) - 0.5) * 460;
               const dy = (noise(seed + 7) - 0.5) * 260;
@@ -94,7 +96,7 @@ const DataAssembly = ({ accent }: DataAssemblyProps) => {
                   className="flex items-center justify-between gap-2 rounded-lg border border-primary-white/15 bg-secondary-background/80 px-2.5 py-1.5 backdrop-blur-sm"
                   style={{
                     transform: `translate3d(${dx * away}px, ${dy * away}px, 0) rotate(${rotate * away}deg)`,
-                    opacity: 0.35 + 0.65 * settle,
+                    opacity: 0.18 + 0.82 * settle,
                     willChange: 'transform',
                   }}
                 >
