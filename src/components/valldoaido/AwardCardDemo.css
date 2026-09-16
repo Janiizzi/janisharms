@@ -13,10 +13,11 @@
 
 .awd-card {
   /* The storefront uses 6rem / 4rem on a full-width product card. This demo
-     card is deliberately small, so the medals scale down with it. */
-  --awd-box-rest: 4.2rem;
-  --awd-box-open: 2.9rem;
-  --awd-gap: -0.45rem;
+     card is a small square, so the stack is sized to fan all five medals out
+     inside it without spilling past the title bar. */
+  --awd-box-rest: 3.4rem;
+  --awd-box-open: 2.2rem;
+  --awd-gap: -0.35rem;
 }
 
 .awd-stack {

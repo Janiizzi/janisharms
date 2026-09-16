@@ -132,7 +132,7 @@ export const specSection = {
 };
 
 export const awardSection = {
-  title: 'Five medals, one corner',
+  title: 'Down to the Detail',
   body:
     'Roughly one in six wines has won something, and the ones that have often have won several times. A row of ' +
     'five medals on a product card would drown the bottle, and showing only the best one throws away the rest. ' +

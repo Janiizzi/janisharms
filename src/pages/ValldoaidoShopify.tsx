@@ -1,11 +1,12 @@
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faArrowLeft, faArrowUpRightFromSquare, faCheck, faXmark } from '@fortawesome/free-solid-svg-icons';
+import { faArrowLeft, faArrowUpRightFromSquare } from '@fortawesome/free-solid-svg-icons';
 import RevealOnView from '../components/RevealOnView';
 import SeriesNav from '../components/valldoaido/SeriesNav';
 import SpecSheet from '../components/valldoaido/SpecSheet';
 import DataAssembly from '../components/valldoaido/DataAssembly';
+import BeforeAfter from '../components/valldoaido/BeforeAfter';
 import ShopTilt from '../components/valldoaido/ShopTilt';
 import AwardCardDemo from '../components/valldoaido/AwardCardDemo';
 import {
@@ -17,7 +18,8 @@ import {
   shopTour,
 } from '../data/valldoaidoShopify';
 
-const COPPER = '#bf864f';
+/** The site's own accent (--primary), not the client's brand colour. */
+const ACCENT = '#fa8220';
 
 const ValldoaidoShopify = () => {
   return (
@@ -47,7 +49,7 @@ const ValldoaidoShopify = () => {
         <div
           aria-hidden="true"
           className="pointer-events-none absolute -top-40 left-1/2 h-[520px] w-[820px] -translate-x-1/2 rounded-full blur-[120px] opacity-25"
-          style={{ background: `radial-gradient(circle, ${COPPER} 0%, transparent 70%)` }}
+          style={{ background: `radial-gradient(circle, ${ACCENT} 0%, transparent 70%)` }}
         />
 
         <div className="relative mx-auto max-w-5xl">
@@ -60,12 +62,12 @@ const ValldoaidoShopify = () => {
           </Link>
 
           <div className="mt-6">
-            <SeriesNav current="shopify" accent={COPPER} />
+            <SeriesNav current="shopify" accent={ACCENT} />
           </div>
 
           <RevealOnView className="mt-8">
             <h1 className="text-4xl font-bold text-primary-white md:text-5xl">{intro.title}</h1>
-            <p className="mt-2 text-lg md:text-xl" style={{ color: COPPER }}>
+            <p className="mt-2 text-lg md:text-xl" style={{ color: ACCENT }}>
               {intro.subtitle}
             </p>
           </RevealOnView>
@@ -91,7 +93,7 @@ const ValldoaidoShopify = () => {
               target="_blank"
               rel="noopener noreferrer"
               className="inline-flex items-center gap-2 rounded-lg px-4 py-2 font-semibold text-primary-background transition hover:brightness-110"
-              style={{ backgroundColor: COPPER }}
+              style={{ backgroundColor: ACCENT }}
             >
               Visit the shop
               <FontAwesomeIcon icon={faArrowUpRightFromSquare} className="text-xs" />
@@ -109,66 +111,35 @@ const ValldoaidoShopify = () => {
           </RevealOnView>
 
           <div className="mt-10">
-            <DataAssembly accent={COPPER} />
+            <DataAssembly accent={ACCENT} />
             <p className="mx-auto mt-4 max-w-2xl text-center text-sm leading-relaxed text-primary-grey/80">
               {assembly.caption}
             </p>
           </div>
 
-          <RevealOnView delayMs={100} className="mt-12">
-            <div className="grid gap-4 md:grid-cols-2">
-              {[
-                { ...problem.before, icon: faXmark, tone: 'text-primary-grey' },
-                { ...problem.after, icon: faCheck, tone: 'text-primary-white' },
-              ].map((column, columnIndex) => (
-                <div
-                  key={column.label}
-                  className="rounded-2xl border border-primary-white/15 bg-secondary-background/70 p-5 md:p-6"
-                  style={columnIndex === 1 ? { borderColor: `${COPPER}55` } : undefined}
-                >
-                  <div
-                    className="text-xs uppercase tracking-[0.18em]"
-                    style={{ color: columnIndex === 1 ? COPPER : undefined }}
-                  >
-                    {column.label}
-                  </div>
-                  <ul className="mt-4 flex flex-col gap-3">
-                    {column.points.map(point => (
-                      <li key={point} className="flex gap-3 text-sm leading-snug">
-                        <FontAwesomeIcon
-                          icon={column.icon}
-                          className="mt-1 w-3 shrink-0 text-xs"
-                          style={{ color: columnIndex === 1 ? COPPER : '#6b6b6b' }}
-                        />
-                        <span className={column.tone}>{point}</span>
-                      </li>
-                    ))}
-                  </ul>
-                </div>
-              ))}
-            </div>
-          </RevealOnView>
+          <div className="mt-16">
+            <BeforeAfter accent={ACCENT} />
+          </div>
         </div>
       </section>
 
       {/* --------------------------------------------------------- Spec sheet */}
       <section id="spec-sheet" className="px-4 py-14 md:px-10 md:py-16">
         <div className="mx-auto max-w-5xl">
-          <RevealOnView>
-            <div className="text-xs uppercase tracking-[0.2em]" style={{ color: COPPER }}>
-              The product page
-            </div>
-            <h2 className="mt-2 text-2xl font-bold text-primary-white md:text-3xl">{specSection.title}</h2>
-            <p className="mt-3 max-w-3xl leading-relaxed text-primary-grey">{specSection.body}</p>
-          </RevealOnView>
+          <div className="grid items-start gap-10 md:grid-cols-2 md:gap-12">
+            <RevealOnView className="min-w-0">
+              <div className="text-xs uppercase tracking-[0.2em]" style={{ color: ACCENT }}>
+                The product page
+              </div>
+              <h2 className="mt-2 text-2xl font-bold text-primary-white md:text-3xl">{specSection.title}</h2>
+              <p className="mt-3 leading-relaxed text-primary-grey">{specSection.body}</p>
+              <p className="mt-4 text-xs text-primary-grey/70">{specSection.note}</p>
+            </RevealOnView>
 
-          <RevealOnView delayMs={100} className="mt-8">
-            <SpecSheet accent={COPPER} />
-          </RevealOnView>
-
-          <RevealOnView delayMs={140} className="mt-4">
-            <p className="text-xs text-primary-grey/70">{specSection.note}</p>
-          </RevealOnView>
+            <RevealOnView delayMs={100} className="min-w-0">
+              <SpecSheet accent={ACCENT} />
+            </RevealOnView>
+          </div>
         </div>
       </section>
 
@@ -176,20 +147,17 @@ const ValldoaidoShopify = () => {
       <section id="awards" className="px-4 py-14 md:px-10 md:py-16">
         <div className="mx-auto max-w-5xl">
           <RevealOnView>
-            <div className="text-xs uppercase tracking-[0.2em]" style={{ color: COPPER }}>
+            <div className="text-xs uppercase tracking-[0.2em]" style={{ color: ACCENT }}>
               Interaction
             </div>
             <h2 className="mt-2 text-2xl font-bold text-primary-white md:text-3xl">{awardSection.title}</h2>
           </RevealOnView>
 
           <RevealOnView delayMs={100} className="mt-6">
-            <div className="grid items-start gap-8 md:grid-cols-[1fr_auto] md:gap-12">
-              <div className="flex flex-col gap-4">
-                <p className="max-w-xl leading-relaxed text-primary-grey">{awardSection.body}</p>
-                <p className="max-w-xl text-sm leading-relaxed text-primary-grey/70">{awardSection.note}</p>
-              </div>
-              <AwardCardDemo accent={COPPER} />
-            </div>
+            <AwardCardDemo accent={ACCENT}>
+              <p className="max-w-xl leading-relaxed text-primary-grey">{awardSection.body}</p>
+              <p className="max-w-xl text-sm leading-relaxed text-primary-grey/70">{awardSection.note}</p>
+            </AwardCardDemo>
           </RevealOnView>
         </div>
       </section>
@@ -203,7 +171,7 @@ const ValldoaidoShopify = () => {
           </RevealOnView>
 
           <div className="mt-12">
-            <ShopTilt accent={COPPER} />
+            <ShopTilt accent={ACCENT} />
           </div>
         </div>
       </section>
@@ -221,7 +189,7 @@ const ValldoaidoShopify = () => {
                 <Link
                   to="/projects/valldoaido"
                   className="rounded-lg px-4 py-2 font-semibold text-primary-background transition hover:brightness-110"
-                  style={{ backgroundColor: COPPER }}
+                  style={{ backgroundColor: ACCENT }}
                 >
                   The branding
                 </Link>

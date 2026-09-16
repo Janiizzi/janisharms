@@ -8,7 +8,10 @@ import SeriesNav from '../components/valldoaido/SeriesNav';
 import Lightbox, { type LightboxItem } from '../components/Lightbox';
 import { intro, foundations, iconSystem, chapters, allWorks } from '../data/valldoaido';
 
-const COPPER = '#bf864f';
+/** The site's own accent (--primary). */
+const ACCENT = '#fa8220';
+/** The client's actual brand colour — only for showing the brand itself. */
+const BRAND_COPPER = '#bf864f';
 
 const lightboxItems: LightboxItem[] = allWorks.map(work => ({
   src: `/valldoaido/full/${work.slug}.webp`,
@@ -49,7 +52,7 @@ const Valldoaido = () => {
         <div
           aria-hidden="true"
           className="pointer-events-none absolute -top-40 left-1/2 h-[520px] w-[820px] -translate-x-1/2 rounded-full blur-[120px] opacity-25"
-          style={{ background: `radial-gradient(circle, ${COPPER} 0%, transparent 70%)` }}
+          style={{ background: `radial-gradient(circle, ${ACCENT} 0%, transparent 70%)` }}
         />
 
         <div className="relative mx-auto max-w-5xl">
@@ -62,13 +65,13 @@ const Valldoaido = () => {
           </Link>
 
           <div className="mt-6">
-            <SeriesNav current="branding" accent={COPPER} />
+            <SeriesNav current="branding" accent={ACCENT} />
           </div>
 
           <RevealOnView className="mt-8 flex flex-col items-start gap-6 md:flex-row md:items-center">
             <div
               className="flex w-full max-w-[280px] items-center justify-center rounded-2xl px-8 py-7 shrink-0"
-              style={{ backgroundColor: COPPER }}
+              style={{ backgroundColor: BRAND_COPPER }}
             >
               <img
                 src="/valldoaido/logo-white.png"
@@ -81,7 +84,7 @@ const Valldoaido = () => {
 
             <div>
               <h1 className="text-4xl font-bold text-primary-white md:text-5xl">{intro.title}</h1>
-              <p className="mt-2 text-lg md:text-xl" style={{ color: COPPER }}>
+              <p className="mt-2 text-lg md:text-xl" style={{ color: ACCENT }}>
                 {intro.subtitle}
               </p>
             </div>
@@ -108,7 +111,7 @@ const Valldoaido = () => {
               target="_blank"
               rel="noopener noreferrer"
               className="inline-flex items-center gap-2 rounded-lg px-4 py-2 font-semibold text-primary-background transition hover:brightness-110"
-              style={{ backgroundColor: COPPER }}
+              style={{ backgroundColor: ACCENT }}
             >
               Visit valldoaido.ch
               <FontAwesomeIcon icon={faArrowUpRightFromSquare} className="text-xs" />
@@ -156,7 +159,7 @@ const Valldoaido = () => {
                   {/* Set in the face it names, so the card is its own specimen. */}
                   <div
                     className="mt-4 text-2xl leading-snug md:text-3xl"
-                    style={{ color: COPPER, fontFamily: font.fontFamily }}
+                    style={{ color: ACCENT, fontFamily: font.fontFamily }}
                   >
                     {font.sample}
                   </div>
@@ -205,7 +208,7 @@ const Valldoaido = () => {
         <section key={chapter.id} id={chapter.id} className="px-4 py-14 md:px-10 md:py-16">
           <div className="mx-auto max-w-5xl">
             <RevealOnView>
-              <div className="text-xs uppercase tracking-[0.2em]" style={{ color: COPPER }}>
+              <div className="text-xs uppercase tracking-[0.2em]" style={{ color: ACCENT }}>
                 {chapter.eyebrow}
               </div>
               <h2 className="mt-2 text-2xl font-bold text-primary-white md:text-3xl">{chapter.title}</h2>
@@ -270,7 +273,7 @@ const Valldoaido = () => {
                   target="_blank"
                   rel="noopener noreferrer"
                   className="rounded-lg px-4 py-2 font-semibold text-primary-background transition hover:brightness-110"
-                  style={{ backgroundColor: COPPER }}
+                  style={{ backgroundColor: ACCENT }}
                 >
                   valldoaido.ch
                 </a>

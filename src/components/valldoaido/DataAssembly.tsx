@@ -53,11 +53,11 @@ const DataAssembly = ({ accent }: DataAssemblyProps) => {
   let chipIndex = 0;
 
   return (
-    <div ref={ref} className="relative overflow-hidden rounded-2xl px-4 py-14 md:px-10 md:py-20">
+    <div ref={ref} className="relative overflow-hidden px-1 py-14 md:px-2 md:py-20">
       {/* Where the data used to live. */}
       <p
         aria-hidden="true"
-        className="pointer-events-none absolute inset-0 select-none px-6 py-10 text-justify text-sm leading-relaxed text-primary-grey md:px-12 md:text-base"
+        className="pointer-events-none absolute inset-0 select-none px-2 py-10 text-justify text-sm leading-relaxed text-primary-grey md:px-4 md:text-base"
         style={{
           opacity: 0.45 * (1 - proseOut),
           filter: `blur(${proseOut * 5}px)`,
@@ -65,13 +65,6 @@ const DataAssembly = ({ accent }: DataAssemblyProps) => {
       >
         {PROSE}
       </p>
-
-      {/* The frame the fields end up inside. */}
-      <div
-        aria-hidden="true"
-        className="pointer-events-none absolute inset-2 rounded-2xl border"
-        style={{ borderColor: `${accent}33`, opacity: frameIn }}
-      />
 
       <div className="relative grid grid-cols-1 gap-x-6 gap-y-8 sm:grid-cols-3">
         {columns.map(group => (
