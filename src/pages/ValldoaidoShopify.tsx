@@ -149,15 +149,18 @@ const ValldoaidoShopify = () => {
       {/* ------------------------------------------------------ Award animation */}
       <section id="awards" className="px-4 py-14 md:px-10 md:py-16">
         <div className="mx-auto max-w-5xl">
+          {/* Heading sits in the right column with the copy, rather than
+              spanning the section above the card. */}
           <RevealOnView>
-            <div className="text-xs uppercase tracking-[0.2em]" style={{ color: ACCENT }}>
-              Interaction
-            </div>
-            <h2 className="mt-2 text-2xl font-bold text-primary-white md:text-3xl">{awardSection.title}</h2>
-          </RevealOnView>
-
-          <RevealOnView delayMs={100} className="mt-6">
             <AwardCardDemo accent={ACCENT}>
+              <div>
+                <div className="text-xs uppercase tracking-[0.2em]" style={{ color: ACCENT }}>
+                  Interaction
+                </div>
+                <h2 className="mt-2 text-2xl font-bold text-primary-white md:text-3xl">
+                  {awardSection.title}
+                </h2>
+              </div>
               <p className="max-w-xl leading-relaxed text-primary-grey">{awardSection.body}</p>
               <p className="max-w-xl text-sm leading-relaxed text-primary-grey/70">{awardSection.note}</p>
             </AwardCardDemo>

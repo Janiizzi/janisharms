@@ -28,9 +28,46 @@ const AwardCardDemo = ({ accent, children }: AwardCardDemoProps) => {
 
   return (
     <div className="grid items-center gap-8 md:grid-cols-[auto_1fr] md:gap-12">
+      <div className="flex flex-col gap-5">
+        {children}
+
+        <div className="flex flex-wrap items-center gap-2">
+          <span className="text-xs uppercase tracking-[0.16em] text-primary-grey">This wine has</span>
+          {COUNTS.map(option => {
+            const isActive = option === count;
+            return (
+              <button
+                key={option}
+                type="button"
+                onClick={() => {
+                  setCount(option);
+                  setTappedOpen(false);
+                }}
+                aria-pressed={isActive}
+                className={`rounded-full border px-3 py-1.5 text-xs font-semibold transition cursor-pointer ${
+                  isActive
+                    ? 'border-transparent text-primary-background'
+                    : 'border-primary-white/20 text-primary-grey hover:border-primary-white/45 hover:text-primary-white'
+                }`}
+                style={isActive ? { backgroundColor: accent } : undefined}
+              >
+                {option} {option === 1 ? 'award' : 'awards'}
+              </button>
+            );
+          })}
+        </div>
+
+        <p className="max-w-md text-xs leading-relaxed text-primary-grey/80">
+          <span className="hidden md:inline">Hover the card. </span>
+          {count === 1
+            ? 'With a single award the stack stays still — there is nothing to fan out.'
+            : `The lead medal shrinks and the other ${count - 1} expand beneath it.`}
+        </p>
+      </div>
+
       {/* A square card, the way it sits in the shop grid. Tilted out of the
           page and straightened on scroll, like the spec sheet. */}
-      <TiltOnScroll degrees={16}>
+      <TiltOnScroll degrees={16} className="md:order-first">
         <div
           className={`awd-card group relative flex aspect-square w-[286px] flex-col overflow-hidden rounded-2xl border border-primary-white/15 bg-secondary-background/70 ${
             tappedOpen ? 'is-open' : ''
@@ -83,43 +120,6 @@ const AwardCardDemo = ({ accent, children }: AwardCardDemoProps) => {
           </button>
         </div>
       </TiltOnScroll>
-
-      <div className="flex flex-col gap-5">
-        {children}
-
-        <div className="flex flex-wrap items-center gap-2">
-          <span className="text-xs uppercase tracking-[0.16em] text-primary-grey">This wine has</span>
-          {COUNTS.map(option => {
-            const isActive = option === count;
-            return (
-              <button
-                key={option}
-                type="button"
-                onClick={() => {
-                  setCount(option);
-                  setTappedOpen(false);
-                }}
-                aria-pressed={isActive}
-                className={`rounded-full border px-3 py-1.5 text-xs font-semibold transition cursor-pointer ${
-                  isActive
-                    ? 'border-transparent text-primary-background'
-                    : 'border-primary-white/20 text-primary-grey hover:border-primary-white/45 hover:text-primary-white'
-                }`}
-                style={isActive ? { backgroundColor: accent } : undefined}
-              >
-                {option} {option === 1 ? 'award' : 'awards'}
-              </button>
-            );
-          })}
-        </div>
-
-        <p className="max-w-md text-xs leading-relaxed text-primary-grey/80">
-          <span className="hidden md:inline">Hover the card. </span>
-          {count === 1
-            ? 'With a single award the stack stays still — there is nothing to fan out.'
-            : `The lead medal shrinks and the other ${count - 1} expand beneath it.`}
-        </p>
-      </div>
     </div>
   );
 };
