@@ -17,6 +17,12 @@ type TiltOnScrollProps = {
   perspective?: number;
   /** How far the block starts pushed back, in px. Adds depth to the arrival. */
   depth?: number;
+  /**
+   * Y-axis rotation it settles into once fully scrolled in, instead of flat.
+   * Give it the same sign as `degrees` so it eases toward rest rather than
+   * swinging through zero — useful for a permanent clipboard-style lean.
+   */
+  settleDegrees?: number;
   className?: string;
 };
 
@@ -24,24 +30,27 @@ type TiltOnScrollProps = {
  * Turns a block out of the page and straightens it as it scrolls in.
  *
  * Same scroll driver as the other animations here, so it scrubs both ways and
- * sits flat for anyone who prefers reduced motion.
+ * settles at `settleDegrees` (flat, by default) for anyone who prefers
+ * reduced motion.
  */
 const TiltOnScroll = ({
   children,
   degrees = 14,
   perspective = 1200,
   depth = 40,
+  settleDegrees = 0,
   className = '',
 }: TiltOnScrollProps) => {
   const { ref, progress } = useScrollProgress<HTMLDivElement>({ start: 0.95, end: 0.15 });
 
   const remaining = 1 - progress;
+  const angle = settleDegrees + (degrees - settleDegrees) * remaining;
 
   return (
     <div ref={ref} className={className} style={{ perspective: `${perspective}px` }}>
       <div
         style={{
-          transform: `rotateY(${degrees * remaining}deg) translateZ(${-depth * remaining}px)`,
+          transform: `rotateY(${angle}deg) translateZ(${-depth * remaining}px)`,
           transformOrigin: '50% 50%',
           willChange: 'transform',
         }}

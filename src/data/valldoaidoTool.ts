@@ -71,15 +71,6 @@ export const findings = {
     { value: '960', label: 'Media files' },
     { value: '1.3 GB', label: 'Total size' },
   ],
-  /** The "Zu erledigen" queue — the problems the tool surfaces. */
-  queue: [
-    { value: '45', label: 'Products without a main image' },
-    { value: '35', label: 'Products not linked to Shopify' },
-    { value: '2', label: 'Shopify products with no counterpart' },
-    { value: '110', label: 'Missing content fields' },
-    { value: '6', label: 'Articles kept more than once' },
-    { value: '16', label: 'Product type not set' },
-  ],
 };
 
 /* ------------------------------------------------------------- the record */
