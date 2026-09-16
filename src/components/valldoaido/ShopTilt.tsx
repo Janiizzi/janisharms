@@ -48,17 +48,17 @@ const ShopTilt = ({ accent }: ShopTiltProps) => {
         <img
           src="/valldoaido/shop-home.webp"
           alt="The Vall'doAido shop homepage"
-          width={1440}
-          height={1750}
+          width={1459}
+          height={1042}
           loading="lazy"
           decoding="async"
-          className="block w-full"
+          className="block h-auto w-full"
         />
 
         {/* Fades the long page out at the bottom instead of cutting it. */}
         <div
           aria-hidden="true"
-          className="pointer-events-none absolute inset-x-0 bottom-0 h-40"
+          className="pointer-events-none absolute inset-x-0 bottom-0 h-20"
           style={{ background: 'linear-gradient(to top, var(--primary-background), transparent)' }}
         />
       </div>
