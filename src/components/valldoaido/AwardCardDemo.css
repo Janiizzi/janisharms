@@ -12,9 +12,11 @@
  */
 
 .awd-card {
-  --awd-box-rest: 6rem;
-  --awd-box-open: 4rem;
-  --awd-gap: -0.6rem;
+  /* The storefront uses 6rem / 4rem on a full-width product card. This demo
+     card is deliberately small, so the medals scale down with it. */
+  --awd-box-rest: 4.2rem;
+  --awd-box-open: 2.9rem;
+  --awd-gap: -0.45rem;
 }
 
 .awd-stack {
@@ -71,14 +73,14 @@
   opacity: 1;
 }
 
-/* The bottle drifts back very slightly so the fanned stack reads as in front. */
+/* The silhouette dims a little so the fanned stack reads as in front. */
 .awd-bottle {
-  transition: transform 0.35s ease;
+  transition: opacity 0.35s ease;
 }
 
 .awd-card:hover .awd-bottle,
 .awd-card.is-open .awd-bottle {
-  transform: scale(0.97);
+  opacity: 0.55;
 }
 
 @media (prefers-reduced-motion: reduce) {

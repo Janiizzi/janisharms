@@ -50,24 +50,25 @@ const AwardCardDemo = ({ accent }: AwardCardDemoProps) => {
       </div>
 
       <div
-        className={`awd-card group relative w-full max-w-[320px] overflow-hidden rounded-2xl border border-primary-white/15 bg-secondary-background/70 ${
+        className={`awd-card group relative w-full max-w-[220px] overflow-hidden rounded-2xl border border-primary-white/15 bg-secondary-background/70 ${
           tappedOpen ? 'is-open' : ''
         }`}
         onMouseLeave={() => setTappedOpen(false)}
       >
         {/* Stands in for a product card in the shop grid — deliberately stripped
             back to the bottle and the medals. */}
-        <div className="relative flex aspect-[4/5] items-center justify-center bg-[#17130f] p-6">
+        <div className="relative flex aspect-[4/5] items-center justify-center bg-[#17130f] p-5">
           <img
-            src="/valldoaido/awards/bottle-flutt.webp"
-            alt="Flutt Baga Rosé Bruto"
-            width={262}
-            height={900}
+            src="/valldoaido/awards/bottle-silhouette.webp"
+            alt=""
+            aria-hidden="true"
+            width={210}
+            height={720}
             loading="lazy"
             className="awd-bottle max-h-full w-auto object-contain"
           />
 
-          <div className="absolute right-3 top-3 z-10">
+          <div className="absolute right-2 top-2 z-10">
             <div className="awd-stack" aria-label={`${count} Auszeichnungen`}>
               {shown.map(award => (
                 <span key={award.file} className="awd-logo">
@@ -85,22 +86,22 @@ const AwardCardDemo = ({ accent }: AwardCardDemoProps) => {
           </div>
         </div>
 
-        <div className="flex items-baseline justify-between gap-3 px-4 py-3">
-          <span className="text-sm font-semibold text-primary-white">Flutt Baga Rosé Bruto</span>
-          <span className="shrink-0 text-sm text-primary-grey">CHF 13.00</span>
+        <div className="flex items-baseline justify-between gap-2 px-3 py-2.5">
+          <span className="min-w-0 truncate text-xs font-semibold text-primary-white">Flutt Baga Rosé Bruto</span>
+          <span className="shrink-0 text-xs text-primary-grey">CHF 13.00</span>
         </div>
 
         {/* Touch devices get no hover, so give them an explicit control. */}
         <button
           type="button"
           onClick={() => setTappedOpen(open => !open)}
-          className="w-full border-t border-primary-white/10 px-4 py-2 text-xs text-primary-grey transition hover:text-primary-white cursor-pointer md:hidden"
+          className="w-full border-t border-primary-white/10 px-3 py-2 text-[0.7rem] text-primary-grey transition hover:text-primary-white cursor-pointer md:hidden"
         >
           {tappedOpen ? 'Collapse medals' : 'Tap to fan out the medals'}
         </button>
       </div>
 
-      <p className="max-w-[320px] text-xs leading-relaxed text-primary-grey/80">
+      <p className="max-w-[220px] text-xs leading-relaxed text-primary-grey/80">
         <span className="hidden md:inline">Hover the card. </span>
         {count === 1
           ? 'With a single award the stack stays still — there is nothing to fan out.'

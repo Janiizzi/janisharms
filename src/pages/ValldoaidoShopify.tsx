@@ -4,16 +4,17 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faArrowLeft, faArrowUpRightFromSquare, faCheck, faXmark } from '@fortawesome/free-solid-svg-icons';
 import RevealOnView from '../components/RevealOnView';
 import SeriesNav from '../components/valldoaido/SeriesNav';
-import SchemaTree from '../components/valldoaido/SchemaTree';
 import SpecSheet from '../components/valldoaido/SpecSheet';
+import DataAssembly from '../components/valldoaido/DataAssembly';
+import ShopTilt from '../components/valldoaido/ShopTilt';
 import AwardCardDemo from '../components/valldoaido/AwardCardDemo';
 import {
   intro,
   problem,
-  schemaSection,
+  assembly,
   specSection,
   awardSection,
-  upcoming,
+  shopTour,
 } from '../data/valldoaidoShopify';
 
 const COPPER = '#bf864f';
@@ -107,7 +108,14 @@ const ValldoaidoShopify = () => {
             <p className="mt-3 max-w-3xl leading-relaxed text-primary-grey">{problem.body}</p>
           </RevealOnView>
 
-          <RevealOnView delayMs={100} className="mt-8">
+          <div className="mt-10">
+            <DataAssembly accent={COPPER} />
+            <p className="mx-auto mt-4 max-w-2xl text-center text-sm leading-relaxed text-primary-grey/80">
+              {assembly.caption}
+            </p>
+          </div>
+
+          <RevealOnView delayMs={100} className="mt-12">
             <div className="grid gap-4 md:grid-cols-2">
               {[
                 { ...problem.before, icon: faXmark, tone: 'text-primary-grey' },
@@ -143,29 +151,6 @@ const ValldoaidoShopify = () => {
         </div>
       </section>
 
-      {/* ------------------------------------------------------- Schema tree */}
-      <section id="data-model" className="px-4 py-14 md:px-10 md:py-16">
-        <div className="mx-auto max-w-5xl">
-          <RevealOnView>
-            <div className="text-xs uppercase tracking-[0.2em]" style={{ color: COPPER }}>
-              The data model
-            </div>
-            <h2 className="mt-2 text-2xl font-bold text-primary-white md:text-3xl">{schemaSection.title}</h2>
-            <p className="mt-3 max-w-3xl leading-relaxed text-primary-grey">{schemaSection.body}</p>
-          </RevealOnView>
-
-          <RevealOnView delayMs={100} className="mt-8">
-            <SchemaTree accent={COPPER} />
-          </RevealOnView>
-
-          <RevealOnView delayMs={140} className="mt-5">
-            <p className="max-w-3xl border-l-2 pl-4 text-sm leading-relaxed text-primary-grey" style={{ borderColor: COPPER }}>
-              {schemaSection.footnote}
-            </p>
-          </RevealOnView>
-        </div>
-      </section>
-
       {/* --------------------------------------------------------- Spec sheet */}
       <section id="spec-sheet" className="px-4 py-14 md:px-10 md:py-16">
         <div className="mx-auto max-w-5xl">
@@ -195,34 +180,30 @@ const ValldoaidoShopify = () => {
               Interaction
             </div>
             <h2 className="mt-2 text-2xl font-bold text-primary-white md:text-3xl">{awardSection.title}</h2>
-            <p className="mt-3 max-w-3xl leading-relaxed text-primary-grey">{awardSection.body}</p>
           </RevealOnView>
 
-          <RevealOnView delayMs={100} className="mt-8">
-            <div className="grid items-start gap-8 md:grid-cols-[auto_1fr]">
-              <AwardCardDemo accent={COPPER} />
-
-              <div className="flex flex-col gap-4 md:pt-10">
-                <p className="max-w-xl leading-relaxed text-primary-grey">{awardSection.detail}</p>
+          <RevealOnView delayMs={100} className="mt-6">
+            <div className="grid items-start gap-8 md:grid-cols-[1fr_auto] md:gap-12">
+              <div className="flex flex-col gap-4">
+                <p className="max-w-xl leading-relaxed text-primary-grey">{awardSection.body}</p>
                 <p className="max-w-xl text-sm leading-relaxed text-primary-grey/70">{awardSection.note}</p>
               </div>
+              <AwardCardDemo accent={COPPER} />
             </div>
           </RevealOnView>
         </div>
       </section>
 
-      {/* ----------------------------------------------------------- Shorter bits */}
-      <section className="px-4 py-14 md:px-10 md:py-16">
+      {/* ------------------------------------------------------------ The shop */}
+      <section className="overflow-hidden px-4 py-14 md:px-10 md:py-20">
         <div className="mx-auto max-w-5xl">
-          <div className="grid gap-4 md:grid-cols-3">
-            {upcoming.map((block, index) => (
-              <RevealOnView key={block.title} delayMs={index * 80}>
-                <div className="h-full rounded-2xl border border-primary-white/15 bg-secondary-background/70 p-5 md:p-6">
-                  <h3 className="text-lg font-semibold text-primary-white">{block.title}</h3>
-                  <p className="mt-3 text-sm leading-relaxed text-primary-grey">{block.body}</p>
-                </div>
-              </RevealOnView>
-            ))}
+          <RevealOnView>
+            <h2 className="text-2xl font-bold text-primary-white md:text-3xl">{shopTour.title}</h2>
+            <p className="mt-3 max-w-3xl leading-relaxed text-primary-grey">{shopTour.body}</p>
+          </RevealOnView>
+
+          <div className="mt-12">
+            <ShopTilt accent={COPPER} />
           </div>
         </div>
       </section>

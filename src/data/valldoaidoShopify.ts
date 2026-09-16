@@ -11,11 +11,11 @@
  */
 
 export const intro = {
-  title: 'Shopify theme',
-  subtitle: 'A wine shop rebuilt around its own data model',
+  title: 'Shopify theme rebuild',
+  subtitle: 'A theme rebuild for a wine shop with its own data model',
   shopUrl: 'https://valldoaido.ch',
   lede:
-    'The shop already existed. What it did not have was a way to describe a wine. Every technical fact — grape, ' +
+    'The shop for Vall\'doAido already existed. It was built by a development studio in Portugal. To fit the fast changing needs of the business, I rebuilt the theme from the ground up. What it did not have was a way to describe a wine. Every technical fact — grape, ' +
     'alcohol, acidity, soil, producer — was typed by hand into an HTML block on each product, and the printed ' +
     'fact sheet was bolted on as a PDF download. Adding one wine cost hours. I rebuilt the theme around typed ' +
     'metafields and metaobjects, so a wine is now data the template renders, not markup someone writes.',
@@ -23,37 +23,36 @@ export const intro = {
     { label: 'Role', value: 'Theme development & data modelling' },
     { label: 'Period', value: '2025 – today' },
     { label: 'Stack', value: 'Liquid, metafields, metaobjects, JS, CSS' },
-    { label: 'Scope', value: 'Product page, filtering, i18n, Admin API' },
+    { label: 'Scope', value: 'Product page, Collections, Admin API, etc.' },
   ],
 };
 
 /* -------------------------------------------------------------- the problem */
 
 export const problem = {
-  title: 'What a wine used to cost',
+  title: '"The biggest problem" — Structure',
   body:
     'The previous setup treated every product as a one-off. The fact sheet the producer supplies — the ficha ' +
     'técnica — was attached as a PDF download, and anything that needed to be visible on the page was pasted ' +
     'into a rich-text block by hand, per wine, in every language. Nothing was queryable: you could not filter ' +
-    'by region, because "Beira Interior" was a run of characters inside a paragraph, not a value.',
+    'by region, because "Beira Interior" was a run of characters inside a paragraph, not a value. This alone ' +
+    'made managing the shop a project in itself. Costing the owner valuable time he could have spent on the business.',
   before: {
     label: 'Before',
     points: [
       'One hand-written HTML block per product',
-      'The ficha técnica as a PDF download',
-      'Re-typed for every language',
+      'Hours to add a new wine, prone to typos and inconsistencies',
       'No filtering — the data was prose',
-      'A producer description copy-pasted onto each of their wines',
+      'Repeating recurring information, like a producer or region',
     ],
   },
   after: {
     label: 'After',
     points: [
       '19 typed metafield definitions rendered by one template',
-      'The fact sheet is the page, not an attachment',
-      'Translated once per metaobject, not per product',
+      'using Claude + MCP, a new wine is added in minutes',
       'Filter by producer, region, grape and wine type',
-      'A producer is one record, referenced by all their wines',
+      'Shared metaobjects for producers, winemakers, regions, etc.',
     ],
   },
 };
@@ -85,82 +84,10 @@ export interface SchemaField {
   usedIn?: number;
 }
 
-export interface MetaobjectDef {
-  /** Shopify metaobject type handle. */
-  type: string;
-  name: string;
-  description?: string;
-  /** Number of entries of this definition in the store. */
-  entries: number;
-  fields: SchemaField[];
-  /** The entry the example product resolves to. */
-  example: string;
-}
-
-export const metaobjects: Record<string, MetaobjectDef> = {
-  wine_type: {
-    type: 'wine_type',
-    name: 'Wine Type',
-    description: 'Type of wine (Fortificado, Tinto, Branco, Rosé, …)',
-    entries: 11,
-    example: 'Weisswein',
-    fields: [{ key: 'name', type: 'single_line_text', value: 'Weisswein' }],
-  },
-  region: {
-    type: 'region',
-    name: 'Region',
-    description: 'Describes a region object',
-    entries: 11,
-    example: 'Beira Interior',
-    fields: [
-      { key: 'name', type: 'single_line_text', value: 'Beira Interior' },
-      { key: 'country', type: 'single_line_text', value: 'Portugal' },
-      { key: 'description', type: 'single_line_text', value: 'Granite plateau, 500–700 m…' },
-      { key: 'map_image', type: 'single_line_text', value: 'beira-interior.svg' },
-    ],
-  },
-  producer: {
-    type: 'producer',
-    name: 'Producer',
-    description: 'This describes a single producer/brand',
-    entries: 11,
-    example: 'LA Ferraz',
-    fields: [
-      { key: 'name', type: 'single_line_text', value: 'LA Ferraz' },
-      { key: 'region', type: 'reference', refType: 'region' },
-      { key: 'description', type: 'rich_text', value: 'Wine, Love and Family…' },
-      { key: 'logo', type: 'file_list' },
-      { key: 'website', type: 'url', value: 'laferraz.pt' },
-      { key: 'picture', type: 'file' },
-      { key: 'link_to_description', type: 'url' },
-    ],
-  },
-  winemaker: {
-    type: 'winemaker',
-    name: 'Winemaker',
-    description: 'Describes the person that produced the wine',
-    entries: 17,
-    example: 'José Ribeiro Brandão',
-    fields: [
-      { key: 'name', type: 'single_line_text', value: 'José Ribeiro Brandão' },
-      { key: 'bio', type: 'rich_text' },
-      { key: 'photo', type: 'file' },
-      { key: 'producer', type: 'reference', refType: 'producer' },
-    ],
-  },
-  award: {
-    type: 'award',
-    name: 'Award',
-    entries: 120,
-    example: 'Portugal Wine Trophy 2026',
-    fields: [
-      { key: 'name', type: 'single_line_text', value: 'Portugal Wine Trophy' },
-      { key: 'rang/platz', type: 'single_line_text', value: 'GOLD' },
-      { key: 'logo', type: 'file' },
-      { key: 'link', type: 'url' },
-      { key: 'jahr', type: 'integer', value: '2026' },
-    ],
-  },
+export const assembly = {
+  caption:
+    'Nineteen fields, sorted as you scroll. Six of them are references to shared records — a producer or a ' +
+    'region exists once and every wine that needs it points at the same entry.',
 };
 
 /**
@@ -195,18 +122,6 @@ export const exampleProduct = {
   subtitle: 'DOC Beira Interior, Portugal',
 };
 
-export const schemaSection = {
-  title: 'A wine as a graph, not a paragraph',
-  body:
-    'Nineteen metafield definitions describe a product. Six of them are not values but references: they point at ' +
-    'metaobjects — Producer, Winemaker, Region, Wine Type, Grape, Award — that exist once and are reused by every ' +
-    'wine that needs them. Correct the spelling of a region and it is correct on all 141 products at once.',
-  footnote:
-    'The part I did not expect: the graph is not flat. A wine points at its winemaker, the winemaker points at ' +
-    'their producer, and the producer points at a region — so the region reaches the product by two different ' +
-    'paths and still resolves to one record.',
-};
-
 export const specSection = {
   title: 'The Steckbrief',
   body:
@@ -226,37 +141,15 @@ export const awardSection = {
   note:
     'Rebuilt from the live CSS, with the real medals from Flutt Baga Rosé Bruto. Hover the card — or use the ' +
     'buttons to change how many awards the wine has.',
-  detail:
-    'The whole thing is CSS: the stack is a flex column where every medal after the first is collapsed to ' +
-    'max-height 0 and opacity 0. On hover the lead medal shrinks 6rem → 4rem and the rest expand into place with ' +
-    'a negative margin so they overlap like a real pile. No JavaScript, and it degrades to a single medal on ' +
-    'touch devices, where there is no hover to give the affordance.',
 };
 
-/** Sections the page shows but which are still waiting for real material. */
-export const upcoming = [
-  {
-    title: 'Mobile first, actually',
-    body:
-      'Most of the shop\'s traffic is on a phone, so the product page was rebuilt for the small screen first — ' +
-      'the spec grid collapses to one column, the gallery and the buy button stay reachable, and the producer ' +
-      'story folds away behind a "Mehr lesen".',
-  },
-  {
-    title: 'Four languages, one source',
-    body:
-      'The store sells in German to a Swiss market, with Portuguese product material underneath. Because the ' +
-      'facts live in metaobjects, a region or a producer is translated once and every product that references ' +
-      'it follows — instead of the same paragraph being re-translated on each wine.',
-  },
-  {
-    title: 'Theme architecture',
-    body:
-      'Custom sections and snippets layered onto the base theme rather than forked into it, so the theme can ' +
-      'still take updates. The spec block, the award components, the producer block and the filtering are all ' +
-      'additions that read from the metafield schema.',
-  },
-];
+export const shopTour = {
+  title: 'The shop today',
+  body:
+    'Most of the traffic is on a phone, so the product page was rebuilt for the small screen first and the ' +
+    'desktop layout follows from it. Everything on the storefront — the spec block, the producer story, the ' +
+    'awards, the filtering — reads from the same schema.',
+};
 
 /* --------------------------------------------------------- the spec block */
 
