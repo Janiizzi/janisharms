@@ -138,7 +138,7 @@ const ValldoaidoShopify = () => {
             </RevealOnView>
 
             <RevealOnView delayMs={100} className="min-w-0">
-              <TiltOnScroll degrees={16}>
+              <TiltOnScroll degrees={-16}>
                 <SpecSheet accent={ACCENT} />
               </TiltOnScroll>
             </RevealOnView>

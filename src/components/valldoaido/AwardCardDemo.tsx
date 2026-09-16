@@ -30,7 +30,7 @@ const AwardCardDemo = ({ accent, children }: AwardCardDemoProps) => {
     <div className="grid items-center gap-8 md:grid-cols-[auto_1fr] md:gap-12">
       {/* A square card, the way it sits in the shop grid. Tilted out of the
           page and straightened on scroll, like the spec sheet. */}
-      <TiltOnScroll degrees={-16}>
+      <TiltOnScroll degrees={16}>
         <div
           className={`awd-card group relative flex aspect-square w-[286px] flex-col overflow-hidden rounded-2xl border border-primary-white/15 bg-secondary-background/70 ${
             tappedOpen ? 'is-open' : ''

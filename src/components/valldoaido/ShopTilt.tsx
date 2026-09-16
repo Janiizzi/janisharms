@@ -45,7 +45,7 @@ const ShopTilt = ({ accent }: ShopTiltProps) => {
   // Runs 0 → PANELS.length - 1: which window currently sits at the front.
   // Starts once the deck is upright, so the two motions do not overlap, and
   // finishes well before the end of the band so the last page stays up.
-  const cycle = dwell(range(progress, 0.32, 0.78) * (PANELS.length - 1));
+  const cycle = dwell(range(progress, 0.32, 0.58) * (PANELS.length - 1));
   const active = Math.min(PANELS.length - 1, Math.round(cycle));
 
   return (
