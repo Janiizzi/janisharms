@@ -37,14 +37,15 @@ type ShopTiltProps = { accent: string };
  */
 const ShopTilt = ({ accent }: ShopTiltProps) => {
   // A long band: the deck needs room to stand up and then deal three windows.
-  const { ref, progress } = useScrollProgress<HTMLDivElement>({ start: 1.0, end: -0.55 });
+  const { ref, progress } = useScrollProgress<HTMLDivElement>({ start: 1.0, end: -0.7 });
 
   // Linear, not eased — easing flattened the tilt out while the deck was still
   // entering the screen, so it barely read as a tilt at all.
   const entry = range(progress, 0, 0.3);
   // Runs 0 → PANELS.length - 1: which window currently sits at the front.
-  // Starts once the deck is upright, so the two motions do not overlap.
-  const cycle = dwell(range(progress, 0.32, 0.96) * (PANELS.length - 1));
+  // Starts once the deck is upright, so the two motions do not overlap, and
+  // finishes well before the end of the band so the last page stays up.
+  const cycle = dwell(range(progress, 0.32, 0.78) * (PANELS.length - 1));
   const active = Math.min(PANELS.length - 1, Math.round(cycle));
 
   return (

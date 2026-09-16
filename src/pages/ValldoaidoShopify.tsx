@@ -8,6 +8,7 @@ import SpecSheet from '../components/valldoaido/SpecSheet';
 import DataAssembly from '../components/valldoaido/DataAssembly';
 import BeforeAfter from '../components/valldoaido/BeforeAfter';
 import ShopTilt from '../components/valldoaido/ShopTilt';
+import TiltOnScroll from '../components/valldoaido/TiltOnScroll';
 import AwardCardDemo from '../components/valldoaido/AwardCardDemo';
 import {
   intro,
@@ -126,7 +127,7 @@ const ValldoaidoShopify = () => {
       {/* --------------------------------------------------------- Spec sheet */}
       <section id="spec-sheet" className="px-4 py-14 md:px-10 md:py-16">
         <div className="mx-auto max-w-5xl">
-          <div className="grid items-start gap-10 md:grid-cols-2 md:gap-12">
+          <div className="grid items-center gap-10 md:grid-cols-2 md:gap-12">
             <RevealOnView className="min-w-0">
               <div className="text-xs uppercase tracking-[0.2em]" style={{ color: ACCENT }}>
                 The product page
@@ -137,7 +138,9 @@ const ValldoaidoShopify = () => {
             </RevealOnView>
 
             <RevealOnView delayMs={100} className="min-w-0">
-              <SpecSheet accent={ACCENT} />
+              <TiltOnScroll degrees={16}>
+                <SpecSheet accent={ACCENT} />
+              </TiltOnScroll>
             </RevealOnView>
           </div>
         </div>
