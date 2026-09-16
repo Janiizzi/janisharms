@@ -156,7 +156,7 @@ export const chapters: Chapter[] = [
         year: '2023',
         medium: 'Signage',
         ratio: 1800 / 755,
-        wide: true,
+        wide: false,
       },
       {
         slug: 'entrance-banner',

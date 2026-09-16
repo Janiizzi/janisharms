@@ -10,6 +10,7 @@ const routes = [
   '/projects',
   '/projects/valldoaido',
   '/projects/valldoaido/shopify',
+  '/projects/valldoaido/backoffice',
   '/contact',
   '/privacy',
   '/in-construction',

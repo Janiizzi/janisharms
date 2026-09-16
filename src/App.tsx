@@ -8,6 +8,7 @@ const Home = lazy(() => import('./pages/Home'));
 const Projects = lazy(() => import('./pages/Projects'));
 const Valldoaido = lazy(() => import('./pages/Valldoaido'));
 const ValldoaidoShopify = lazy(() => import('./pages/ValldoaidoShopify'));
+const ValldoaidoTool = lazy(() => import('./pages/ValldoaidoTool'));
 const Colorscheme = lazy(() => import('./pages/Colorscheme'));
 const Contact = lazy(() => import('./pages/Contact'));
 const Skills = lazy(() => import('./pages/Skills'));
@@ -28,6 +29,7 @@ function App() {
             <Route path="/projects" element={<Projects />} />
             <Route path="/projects/valldoaido" element={<Valldoaido />} />
             <Route path="/projects/valldoaido/shopify" element={<ValldoaidoShopify />} />
+            <Route path="/projects/valldoaido/backoffice" element={<ValldoaidoTool />} />
             <Route path="/colorscheme" element={<Colorscheme />} />
             <Route path="/contact" element={<Contact />} />
             <Route path="/skills" element={<Skills />} />

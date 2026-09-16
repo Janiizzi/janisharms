@@ -8,6 +8,7 @@ import Home from './pages/Home'
 import Projects from './pages/Projects'
 import Valldoaido from './pages/Valldoaido'
 import ValldoaidoShopify from './pages/ValldoaidoShopify'
+import ValldoaidoTool from './pages/ValldoaidoTool'
 import Skills from './pages/Skills'
 import Contact from './pages/Contact'
 import Privacy from './pages/Privacy'
@@ -29,6 +30,7 @@ export function render(url: string) {
               <Route path="/projects" element={<Projects />} />
               <Route path="/projects/valldoaido" element={<Valldoaido />} />
               <Route path="/projects/valldoaido/shopify" element={<ValldoaidoShopify />} />
+              <Route path="/projects/valldoaido/backoffice" element={<ValldoaidoTool />} />
               <Route path="/skills" element={<Skills />} />
               <Route path="/contact" element={<Contact />} />
               <Route path="/privacy" element={<Privacy />} />

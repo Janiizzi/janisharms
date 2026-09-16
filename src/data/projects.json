@@ -24,6 +24,14 @@
         "skills": ["shopify", "liquid", "javascript", "css", "git"]
     },
     {
+        "title": "Vall'doAido - Back-office Tool",
+        "description": "A desktop tool for [Vall'doAido](https://valldoaido.ch) that holds one product record and syncs it to Bexio and Shopify. It flags where the systems disagree, runs an image pipeline for bottle photos, and generates the printed product catalogue as a PDF in three price tiers.",
+        "imageUrl": "/card-previews/valldoaido-tool.png",
+        "projectUrl": "/projects/valldoaido/backoffice",
+        "type": "webapp",
+        "skills": ["python", "sql", "shopify", "git"]
+    },
+    {
         "title": "Skischool Event raffle - Web Application",
         "description": "A web application for managing raffles for skischool events and competitions built specifically for the [Skischool Mürren](https://skischule-muerren.ch).",
         "imageUrl": "/card-previews/skimuerren.png",
