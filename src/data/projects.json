@@ -9,9 +9,9 @@
     },
     {
         "title": "Vall'doAido - Branding for a Local Business",
-        "description": "For a few years I have been working on the branding for [Vall'doAido](https://valldoaido.ch), a wine seller and online store. This includes the design of websites, menus, flyers, and other marketing materials.",
+        "description": "Since 2023 I have been designing the brand touchpoints for [Vall'doAido](https://valldoaido.ch), a Portuguese wine merchant and online store in Switzerland: the store opening campaign, a printed wine catalogue, recurring seasonal tasting campaigns, packaging, signage and social media.",
         "imageUrl": "/card-previews/valldoaido.png",
-        "projectUrl": "in-construction",
+        "projectUrl": "/projects/valldoaido",
         "type": "design",
         "skills": ["photoshop", "illustrator", "indesign"]
     },
@@ -24,10 +24,10 @@
         "skills": ["react", "typescript", "tailwindcss", "git", "nextjs"]
     },
     {
-        "title": "Praxis Andreas Meyer - Website for a Manual Therapist",
+        "title": "Website for a Manual Therapist",
         "description": "A custom WordPress theme built from scratch for a manual therapy practice in Hägendorf, Switzerland. Features a two-axis content architecture for the blog (symptom area × content type), a self-built therapy finder, scroll-driven animations, and a fully custom LocalBusiness/FAQ schema for local SEO — no page builder, no build step required on the server.",
         "imageUrl": "/card-previews/praxis-andreasmeyer.png",
-        "projectUrl": "in-construction",
+        "projectUrl": "https://praxis-andreasmeyer.ch",
         "type": "webapp",
         "skills": ["wordpress", "php", "tailwindcss", "javascript", "css", "git"]
     }

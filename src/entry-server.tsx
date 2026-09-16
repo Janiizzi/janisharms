@@ -6,6 +6,7 @@ import Header from './components/Header'
 import Footer from './components/Footer'
 import Home from './pages/Home'
 import Projects from './pages/Projects'
+import Valldoaido from './pages/Valldoaido'
 import Skills from './pages/Skills'
 import Contact from './pages/Contact'
 import Privacy from './pages/Privacy'
@@ -25,6 +26,7 @@ export function render(url: string) {
             <Routes>
               <Route path="/" element={<Home />} />
               <Route path="/projects" element={<Projects />} />
+              <Route path="/projects/valldoaido" element={<Valldoaido />} />
               <Route path="/skills" element={<Skills />} />
               <Route path="/contact" element={<Contact />} />
               <Route path="/privacy" element={<Privacy />} />

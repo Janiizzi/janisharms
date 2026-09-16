@@ -2,9 +2,11 @@ import { lazy, Suspense } from 'react';
 import { Routes, Route } from 'react-router-dom';
 import Header from './components/Header';
 import Footer from './components/Footer';
+import ScrollToTop from './components/ScrollToTop';
 
 const Home = lazy(() => import('./pages/Home'));
 const Projects = lazy(() => import('./pages/Projects'));
+const Valldoaido = lazy(() => import('./pages/Valldoaido'));
 const Colorscheme = lazy(() => import('./pages/Colorscheme'));
 const Contact = lazy(() => import('./pages/Contact'));
 const Skills = lazy(() => import('./pages/Skills'));
@@ -15,6 +17,7 @@ const Privacy = lazy(() => import('./pages/Privacy'));
 function App() {
   return (
     <>
+    <ScrollToTop />
     <div className="flex min-h-screen flex-col bg-primary-background">
       <Header />
       <main className="flex-1">
@@ -22,6 +25,7 @@ function App() {
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/projects" element={<Projects />} />
+            <Route path="/projects/valldoaido" element={<Valldoaido />} />
             <Route path="/colorscheme" element={<Colorscheme />} />
             <Route path="/contact" element={<Contact />} />
             <Route path="/skills" element={<Skills />} />

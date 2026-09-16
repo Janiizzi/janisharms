@@ -8,6 +8,7 @@ const routes = [
   '/',
   '/skills',
   '/projects',
+  '/projects/valldoaido',
   '/contact',
   '/privacy',
   '/in-construction',
@@ -58,7 +59,17 @@ function buildPage(template, render, route) {
 
   const ogMetas = extractedTags.filter(t => t.includes('property="og:'))
   if (ogMetas.length > 0) {
-    const allOg = [...ogMetas, ...SITE_OG_TAGS]
+    // Only fall back to a site-wide tag when the page didn't set that property
+    // itself — otherwise a page with its own og:image inherits the wrong
+    // og:image:width/height.
+    const ownProperties = new Set(
+      ogMetas.map(t => t.match(/property="(og:[^"]+)"/)?.[1]).filter(Boolean)
+    )
+    const fallbackOg = SITE_OG_TAGS.filter(t => {
+      const property = t.match(/property="(og:[^"]+)"/)?.[1]
+      return property && !ownProperties.has(property)
+    })
+    const allOg = [...ogMetas, ...fallbackOg]
     const replacement = `<!-- Open Graph -->\n    ${allOg.join('\n    ')}`
     pageHtml = pageHtml.replace(/<!-- Open Graph -->[\s\S]*?(?=\n[ \t]*<!--|<\/head>)/, replacement + '\n')
   }

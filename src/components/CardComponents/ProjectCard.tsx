@@ -1,9 +1,10 @@
-import { Fragment, useState } from 'react';
+import { Fragment, useState, type ReactNode } from 'react';
 import OuterCard from './OuterCard';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faEye } from '@fortawesome/free-solid-svg-icons';
 import { getSkillById } from '../../data/skills';
 import { HashLink } from 'react-router-hash-link';
+import { Link } from 'react-router-dom';
 import RevealOnView from '../RevealOnView';
 import type { Project } from "../../data/projects";
 
@@ -53,9 +54,36 @@ const renderDescriptionWithLinks = (text: string) => {
 
 
 
+/** Case studies live on this site, demos live somewhere else. */
+const ProjectLink = ({
+  to,
+  className,
+  children,
+}: {
+  to: string;
+  className?: string;
+  children: ReactNode;
+}) =>
+  to.startsWith('/') ? (
+    <Link to={to} className={className}>
+      {children}
+    </Link>
+  ) : (
+    <a href={to} target='_blank' rel='noopener noreferrer' className={className}>
+      {children}
+    </a>
+  );
+
+
 const ProjectCard = ({ title, description, imageUrl, projectUrl, type, skills }: Project) => {
   const [isHovered, setIsHovered] = useState(false);
   const [showAllSkills, setShowAllSkills] = useState(false);
+
+  const ctaLabel = projectUrl.startsWith('/')
+    ? 'Read Case Study'
+    : type === 'webapp' || type === 'mobileapp'
+      ? 'View Demo'
+      : 'View Design';
 
   return (
     <RevealOnView className='w-full'>
@@ -65,15 +93,15 @@ const ProjectCard = ({ title, description, imageUrl, projectUrl, type, skills }:
           onMouseEnter={() => setIsHovered(true)}
           onMouseLeave={() => setIsHovered(false)}
         >
-          <a href={projectUrl} target='_blank' rel='noopener noreferrer'>
+          <ProjectLink to={projectUrl}>
             <img src={imageUrl} alt={title} className='rounded-lg w-full h-full object-cover object-center' />
             <div className={`absolute inset-0 transition rounded-lg flex items-center justify-center ${isHovered ? 'bg-black/60' : 'bg-black/20'}`}>
               <div className={`flex items-center align-items gap-2 text-white text-base font-semibold transition-opacity ${isHovered ? 'opacity-100' : 'opacity-0'}`}>
                 <FontAwesomeIcon icon={faEye} />
-                {type === 'webapp' || type === 'mobileapp' ? 'View Demo' : 'View Design'}
+                {ctaLabel}
               </div>
             </div>
-          </a>
+          </ProjectLink>
         </div>
         <div>
           <div className='title text-2xl font-bold text-primary-white mt-2'>
@@ -123,9 +151,9 @@ const ProjectCard = ({ title, description, imageUrl, projectUrl, type, skills }:
           </div>
         </div>
         <div className='button mt-2'>
-          <a href={projectUrl} className='inline-block rounded-lg bg-primary px-4 py-2 font-semibold text-primary-background transition hover:brightness-110'>
-            {type === 'webapp' || type === 'mobileapp' ? 'View Demo' : 'View Design'}
-          </a>
+          <ProjectLink to={projectUrl} className='inline-block rounded-lg bg-primary px-4 py-2 font-semibold text-primary-background transition hover:brightness-110'>
+            {ctaLabel}
+          </ProjectLink>
         </div>
       </OuterCard>
     </RevealOnView>

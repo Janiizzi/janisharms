@@ -28,6 +28,30 @@
     --color-primary-grey: var(--primary-grey);
 }
 
+/* The two faces the Vall'doAido material is actually set in, so the typography
+   specimens on that case study show the real thing. Both are self-hosted;
+   browsers only fetch a file when an element asks for the family, so the rest
+   of the site pays nothing.
+
+   Tenor Sans by Denis Masharov, SIL Open Font License 1.1, subset to latin. */
+@font-face {
+  font-family: "Tenor Sans";
+  src: url("/fonts/tenor-sans-latin.woff2") format("woff2");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* Roboto by Christian Robertson, Apache License 2.0 — the latin variable cut
+   from Google Fonts, self-hosted so no visitor data leaves the site. */
+@font-face {
+  font-family: "Roboto";
+  src: url("/fonts/roboto-latin-variable.woff2") format("woff2");
+  font-weight: 100 900;
+  font-style: normal;
+  font-display: swap;
+}
+
 html {
   scroll-behavior: smooth;
 }
