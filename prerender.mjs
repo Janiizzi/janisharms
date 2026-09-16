@@ -9,6 +9,7 @@ const routes = [
   '/skills',
   '/projects',
   '/projects/valldoaido',
+  '/projects/valldoaido/shopify',
   '/contact',
   '/privacy',
   '/in-construction',

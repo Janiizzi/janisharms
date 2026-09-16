@@ -4,6 +4,7 @@ import { Link } from 'react-router-dom';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faArrowLeft, faArrowUpRightFromSquare } from '@fortawesome/free-solid-svg-icons';
 import RevealOnView from '../components/RevealOnView';
+import SeriesNav from '../components/valldoaido/SeriesNav';
 import Lightbox, { type LightboxItem } from '../components/Lightbox';
 import { intro, foundations, iconSystem, chapters, allWorks } from '../data/valldoaido';
 
@@ -59,6 +60,10 @@ const Valldoaido = () => {
             <FontAwesomeIcon icon={faArrowLeft} className="text-xs" />
             All projects
           </Link>
+
+          <div className="mt-6">
+            <SeriesNav current="branding" accent={COPPER} />
+          </div>
 
           <RevealOnView className="mt-8 flex flex-col items-start gap-6 md:flex-row md:items-center">
             <div

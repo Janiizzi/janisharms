@@ -37,7 +37,9 @@
 
         {"id": "php", "title": "PHP", "description": "Practical experience with PHP through building a custom WordPress theme from scratch for a client project. Comfortable working without a framework, structuring template hierarchies, and writing server-rendered logic that runs directly on shared hosting without a build step.", "mapTo": "php"},
 
-        {"id": "wordpress", "title": "WordPress", "description": "Experience building a fully custom WordPress theme from the ground up, rather than relying on a page builder. Comfortable with the template hierarchy, custom post types and fields, the plugin ecosystem, and structuring content models for real-world client needs such as multi-axis blog taxonomies and local SEO schema.", "mapTo": "wordpress"}
+        {"id": "wordpress", "title": "WordPress", "description": "Experience building a fully custom WordPress theme from the ground up, rather than relying on a page builder. Comfortable with the template hierarchy, custom post types and fields, the plugin ecosystem, and structuring content models for real-world client needs such as multi-axis blog taxonomies and local SEO schema.", "mapTo": "wordpress"},
+        {"id": "shopify", "title": "Shopify", "description": "Rebuilt a live wine shop around a proper product data model: typed metafields for every technical value, and metaobjects for the entities that repeat across products — producer, winemaker, region, grape, award. Comfortable with the admin side (definitions, translations, storefront filtering) as well as pushing products through the Admin API from an external tool.", "mapTo": "shopify"},
+        {"id": "liquid", "title": "Liquid", "description": "Built custom sections, blocks and snippets on top of an existing Shopify theme rather than forking it, so the theme can still take updates. Used Liquid to render a product's full technical fact sheet, producer story and awards from metafield and metaobject references, replacing per-product HTML that had been maintained by hand.", "mapTo": "liquid"}
     ]
     },
 

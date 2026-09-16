@@ -167,6 +167,16 @@ export const skillsById = {
         name: 'PHP',
         path: '#php',
         iconUrl: ""
+    },
+    shopify: {
+        name: 'Shopify',
+        path: '#shopify',
+        iconUrl: ""
+    },
+    liquid: {
+        name: 'Liquid',
+        path: '#liquid',
+        iconUrl: ""
     }
 } satisfies Record<string, Skill>;
 

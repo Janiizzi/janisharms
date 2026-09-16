@@ -1,0 +1,90 @@
+/*
+ * Rebuild of the award stack from the Vall'doAido product grid.
+ *
+ * The original is pure CSS on the storefront: the stack is a flex column where
+ * every medal after the first is collapsed to max-height 0, and `.card-wrapper:hover`
+ * expands them while the lead medal shrinks so the pile stays the same weight.
+ * Kept here at the same sizes and durations as the live theme.
+ *
+ * Added for this page: `.is-open`, so the demo can also be driven by tap on
+ * touch devices, where the storefront (correctly) shows a single medal and
+ * nothing else.
+ */
+
+.awd-card {
+  --awd-box-rest: 6rem;
+  --awd-box-open: 4rem;
+  --awd-gap: -0.6rem;
+}
+
+.awd-stack {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.awd-logo {
+  flex: 0 0 auto;
+  width: var(--awd-box-rest);
+  height: var(--awd-box-rest);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  filter: drop-shadow(0 0.1rem 0.4rem rgba(0, 0, 0, 0.55));
+  transition:
+    width 0.25s ease,
+    height 0.25s ease;
+}
+
+.awd-logo img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  display: block;
+}
+
+/* Everything below the lead medal starts collapsed. */
+.awd-logo:not(:first-child) {
+  width: var(--awd-box-open);
+  height: var(--awd-box-open);
+  overflow: hidden;
+  max-height: 0;
+  margin-top: 0;
+  opacity: 0;
+  transition:
+    max-height 0.3s ease,
+    margin-top 0.3s ease,
+    opacity 0.25s ease;
+}
+
+/* The lead medal only shrinks when there is something to make room for. */
+.awd-card:hover .awd-stack:has(.awd-logo:nth-child(2)) .awd-logo:first-child,
+.awd-card.is-open .awd-stack:has(.awd-logo:nth-child(2)) .awd-logo:first-child {
+  width: var(--awd-box-open);
+  height: var(--awd-box-open);
+}
+
+.awd-card:hover .awd-logo:not(:first-child),
+.awd-card.is-open .awd-logo:not(:first-child) {
+  max-height: var(--awd-box-open);
+  margin-top: var(--awd-gap);
+  opacity: 1;
+}
+
+/* The bottle drifts back very slightly so the fanned stack reads as in front. */
+.awd-bottle {
+  transition: transform 0.35s ease;
+}
+
+.awd-card:hover .awd-bottle,
+.awd-card.is-open .awd-bottle {
+  transform: scale(0.97);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .awd-logo,
+  .awd-logo:not(:first-child),
+  .awd-bottle {
+    transition: none;
+  }
+}
