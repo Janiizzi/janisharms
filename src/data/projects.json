@@ -18,7 +18,7 @@
     {
         "title": "Vall'doAido - Shopify Theme & Data Model",
         "description": "A rebuild of the [Vall'doAido](https://valldoaido.ch) Shopify theme around typed metafields and metaobjects. Every wine's technical data used to be hand-written HTML on each product; now a single template renders it, producers and regions are shared records, and the catalogue is filterable across them.",
-        "imageUrl": "/card-previews/valldoaido-shopify.png",
+        "imageUrl": "/card-previews/valldoaido-shopify.webp",
         "projectUrl": "/projects/valldoaido/shopify",
         "type": "webapp",
         "skills": ["shopify", "liquid", "javascript", "css", "git"]
