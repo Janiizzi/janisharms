@@ -4,6 +4,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faArrowLeft, faArrowUpRightFromSquare } from '@fortawesome/free-solid-svg-icons';
 import RevealOnView from '../components/RevealOnView';
 import SeriesNav from '../components/valldoaido/SeriesNav';
+import ScrollGlow from '../components/valldoaido/ScrollGlow';
 import SpecSheet from '../components/valldoaido/SpecSheet';
 import DataAssembly from '../components/valldoaido/DataAssembly';
 import BeforeAfter from '../components/valldoaido/BeforeAfter';
@@ -46,13 +47,8 @@ const ValldoaidoShopify = () => {
       </Helmet>
 
       {/* ---------------------------------------------------------------- Hero */}
-      <header className="relative overflow-hidden px-4 pt-6 pb-14 md:px-10 md:pt-10 md:pb-20">
-        <div
-          aria-hidden="true"
-          className="pointer-events-none absolute -top-40 left-1/2 h-[520px] w-[820px] -translate-x-1/2 rounded-full blur-[120px] opacity-25"
-          style={{ background: `radial-gradient(circle, ${ACCENT} 0%, transparent 70%)` }}
-        />
-
+      <ScrollGlow accent={ACCENT}>
+        <header className="relative px-4 pt-6 pb-14 md:px-10 md:pt-10 md:pb-20">
         <div className="relative mx-auto max-w-5xl">
           <Link
             to="/projects"
@@ -104,7 +100,7 @@ const ValldoaidoShopify = () => {
       </header>
 
       {/* ------------------------------------------------------------ Problem */}
-      <section className="px-4 py-14 md:px-10 md:py-16">
+      <section className="relative px-4 py-14 md:px-10 md:py-16">
         <div className="mx-auto max-w-5xl">
           <RevealOnView>
             <h2 className="text-2xl font-bold text-primary-white md:text-3xl">{problem.title}</h2>
@@ -123,6 +119,7 @@ const ValldoaidoShopify = () => {
           </div>
         </div>
       </section>
+      </ScrollGlow>
 
       {/* --------------------------------------------------------- Spec sheet */}
       <section id="spec-sheet" className="px-4 py-14 md:px-10 md:py-16">

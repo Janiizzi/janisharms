@@ -4,9 +4,10 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faArrowLeft, faCheck } from '@fortawesome/free-solid-svg-icons';
 import RevealOnView from '../components/RevealOnView';
 import SeriesNav from '../components/valldoaido/SeriesNav';
+import ScrollGlow from '../components/valldoaido/ScrollGlow';
 import SyncDiagram from '../components/valldoaido/SyncDiagram';
 import TiltOnScroll from '../components/valldoaido/TiltOnScroll';
-import { intro, problem, findings, record, book, more } from '../data/valldoaidoTool';
+import { intro, problem, findings, record, book } from '../data/valldoaidoTool';
 
 const ACCENT = '#fa8220';
 
@@ -34,63 +35,59 @@ const ValldoaidoTool = () => {
       </Helmet>
 
       {/* ---------------------------------------------------------------- Hero */}
-      <header className="relative overflow-hidden px-4 pt-6 pb-14 md:px-10 md:pt-10 md:pb-20">
-        <div
-          aria-hidden="true"
-          className="pointer-events-none absolute -top-40 left-1/2 h-[520px] w-[820px] -translate-x-1/2 rounded-full blur-[120px] opacity-25"
-          style={{ background: `radial-gradient(circle, ${ACCENT} 0%, transparent 70%)` }}
-        />
+      <ScrollGlow accent={ACCENT}>
+        <header className="relative px-4 pt-6 pb-14 md:px-10 md:pt-10 md:pb-20">
+          <div className="relative mx-auto max-w-5xl">
+            <Link
+              to="/projects"
+              className="inline-flex items-center gap-2 text-sm text-primary-grey transition hover:text-primary"
+            >
+              <FontAwesomeIcon icon={faArrowLeft} className="text-xs" />
+              All projects
+            </Link>
 
-        <div className="relative mx-auto max-w-5xl">
-          <Link
-            to="/projects"
-            className="inline-flex items-center gap-2 text-sm text-primary-grey transition hover:text-primary"
-          >
-            <FontAwesomeIcon icon={faArrowLeft} className="text-xs" />
-            All projects
-          </Link>
+            <div className="mt-6">
+              <SeriesNav current="backoffice" accent={ACCENT} />
+            </div>
 
-          <div className="mt-6">
-            <SeriesNav current="backoffice" accent={ACCENT} />
+            <RevealOnView className="mt-8">
+              <h1 className="text-4xl font-bold text-primary-white md:text-5xl">{intro.title}</h1>
+              <p className="mt-2 text-lg md:text-xl" style={{ color: ACCENT }}>
+                {intro.subtitle}
+              </p>
+            </RevealOnView>
+
+            <RevealOnView delayMs={100} className="mt-6 max-w-3xl text-lg leading-relaxed text-primary-grey">
+              {intro.lede}
+            </RevealOnView>
+
+            <RevealOnView delayMs={160} className="mt-10">
+              <dl className="grid grid-cols-2 gap-x-6 gap-y-6 border-t border-primary-white/10 pt-8 md:grid-cols-4">
+                {intro.facts.map(fact => (
+                  <div key={fact.label}>
+                    <dt className="text-xs uppercase tracking-[0.16em] text-primary-grey">{fact.label}</dt>
+                    <dd className="mt-1 text-sm font-medium text-primary-white md:text-base">{fact.value}</dd>
+                  </div>
+                ))}
+              </dl>
+            </RevealOnView>
           </div>
+        </header>
 
-          <RevealOnView className="mt-8">
-            <h1 className="text-4xl font-bold text-primary-white md:text-5xl">{intro.title}</h1>
-            <p className="mt-2 text-lg md:text-xl" style={{ color: ACCENT }}>
-              {intro.subtitle}
-            </p>
-          </RevealOnView>
+        {/* ------------------------------------------------------------ Problem */}
+        <section className="relative px-4 py-14 md:px-10 md:py-16">
+          <div className="mx-auto max-w-5xl">
+            <RevealOnView>
+              <h2 className="text-2xl font-bold text-primary-white md:text-3xl">{problem.title}</h2>
+              <p className="mt-3 max-w-3xl leading-relaxed text-primary-grey">{problem.body}</p>
+            </RevealOnView>
 
-          <RevealOnView delayMs={100} className="mt-6 max-w-3xl text-lg leading-relaxed text-primary-grey">
-            {intro.lede}
-          </RevealOnView>
-
-          <RevealOnView delayMs={160} className="mt-10">
-            <dl className="grid grid-cols-2 gap-x-6 gap-y-6 border-t border-primary-white/10 pt-8 md:grid-cols-4">
-              {intro.facts.map(fact => (
-                <div key={fact.label}>
-                  <dt className="text-xs uppercase tracking-[0.16em] text-primary-grey">{fact.label}</dt>
-                  <dd className="mt-1 text-sm font-medium text-primary-white md:text-base">{fact.value}</dd>
-                </div>
-              ))}
-            </dl>
-          </RevealOnView>
-        </div>
-      </header>
-
-      {/* ------------------------------------------------------------ Problem */}
-      <section className="px-4 py-14 md:px-10 md:py-16">
-        <div className="mx-auto max-w-5xl">
-          <RevealOnView>
-            <h2 className="text-2xl font-bold text-primary-white md:text-3xl">{problem.title}</h2>
-            <p className="mt-3 max-w-3xl leading-relaxed text-primary-grey">{problem.body}</p>
-          </RevealOnView>
-
-          <RevealOnView delayMs={100} className="mt-8">
-            <SyncDiagram accent={ACCENT} />
-          </RevealOnView>
-        </div>
-      </section>
+            <RevealOnView delayMs={100} className="mt-8">
+              <SyncDiagram accent={ACCENT} />
+            </RevealOnView>
+          </div>
+        </section>
+      </ScrollGlow>
 
       {/* ----------------------------------------------------------- Findings */}
       <section className="px-4 py-14 md:px-10 md:py-16">
@@ -132,12 +129,6 @@ const ValldoaidoTool = () => {
                 </div>
               ))}
             </div>
-          </RevealOnView>
-
-          <RevealOnView delayMs={180} className="mt-5">
-            <p className="max-w-3xl border-l-2 pl-4 text-sm leading-relaxed text-primary-grey" style={{ borderColor: ACCENT }}>
-              {findings.note}
-            </p>
           </RevealOnView>
 
           <RevealOnView delayMs={220} className="mt-10">
@@ -255,28 +246,6 @@ const ValldoaidoTool = () => {
               ))}
             </div>
           </RevealOnView>
-
-          <RevealOnView delayMs={140} className="mt-6">
-            <p className="max-w-3xl border-l-2 pl-4 text-sm leading-relaxed text-primary-grey" style={{ borderColor: ACCENT }}>
-              {book.note}
-            </p>
-          </RevealOnView>
-        </div>
-      </section>
-
-      {/* --------------------------------------------------------------- More */}
-      <section className="px-4 py-14 md:px-10 md:py-16">
-        <div className="mx-auto max-w-5xl">
-          <div className="grid gap-4 md:grid-cols-3">
-            {more.map((block, index) => (
-              <RevealOnView key={block.title} delayMs={index * 80}>
-                <div className="h-full rounded-2xl border border-primary-white/15 bg-secondary-background/70 p-5 md:p-6">
-                  <h3 className="text-lg font-semibold text-primary-white">{block.title}</h3>
-                  <p className="mt-3 text-sm leading-relaxed text-primary-grey">{block.body}</p>
-                </div>
-              </RevealOnView>
-            ))}
-          </div>
         </div>
       </section>
 

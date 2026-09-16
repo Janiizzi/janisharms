@@ -80,9 +80,6 @@ export const findings = {
     { value: '6', label: 'Articles kept more than once' },
     { value: '16', label: 'Product type not set' },
   ],
-  note:
-    'Six duplicate articles and two orphaned Shopify products are exactly the kind of thing four disconnected ' +
-    'systems produce and none of them can report.',
 };
 
 /* ------------------------------------------------------------- the record */
@@ -112,9 +109,6 @@ export const book = {
     'finished — new wines arrived faster than pages did. The same layout is now a PDF export. Pick a selection ' +
     'or take everything, choose which price tier to print, and the book builds in minutes: cover, contents, a ' +
     'divider per producer, then a fact sheet per product using the same icons the print catalogue used.',
-  note:
-    'Three books come out of the same data — retail, restaurant and wholesale — which is why the price tier is a ' +
-    'setting on the export rather than three separate documents to maintain.',
   pages: [
     { file: 'book-cover', label: 'Cover' },
     { file: 'book-contents', label: 'Contents' },
@@ -122,28 +116,3 @@ export const book = {
     { file: 'book-sheet', label: 'Fact sheet' },
   ],
 };
-
-/* ------------------------------------------------------------------- more */
-
-export const more = [
-  {
-    title: 'The image pipeline',
-    body:
-      'Bottle photos come in at every size and on every background. The tool removes the background, normalises ' +
-      'the bottle to a common height so the shop grid lines up, and files the result under the product with a ' +
-      'naming convention instead of a guess.',
-  },
-  {
-    title: 'Why a desktop tool',
-    body:
-      'The people using it are two, in one shop, on their own machines. A local application with direct API ' +
-      'access was less to build and less to run than a hosted service, and it keeps the price data off anything ' +
-      'that needs a login.',
-  },
-  {
-    title: 'Built with Claude Code',
-    body:
-      'Almost all of it. The interesting part was not the typing — it was knowing what the business actually ' +
-      'needed, which came from having done the work by hand for three years first.',
-  },
-];

@@ -5,6 +5,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faArrowLeft, faArrowUpRightFromSquare } from '@fortawesome/free-solid-svg-icons';
 import RevealOnView from '../components/RevealOnView';
 import SeriesNav from '../components/valldoaido/SeriesNav';
+import ScrollGlow from '../components/valldoaido/ScrollGlow';
 import Lightbox, { type LightboxItem } from '../components/Lightbox';
 import { intro, foundations, iconSystem, chapters, allWorks } from '../data/valldoaido';
 
@@ -48,13 +49,8 @@ const Valldoaido = () => {
       </Helmet>
 
       {/* ---------------------------------------------------------------- Hero */}
-      <header className="relative overflow-hidden px-4 pt-6 pb-14 md:px-10 md:pt-10 md:pb-20">
-        <div
-          aria-hidden="true"
-          className="pointer-events-none absolute -top-40 left-1/2 h-[520px] w-[820px] -translate-x-1/2 rounded-full blur-[120px] opacity-25"
-          style={{ background: `radial-gradient(circle, ${ACCENT} 0%, transparent 70%)` }}
-        />
-
+      <ScrollGlow accent={ACCENT}>
+        <header className="relative px-4 pt-6 pb-14 md:px-10 md:pt-10 md:pb-20">
         <div className="relative mx-auto max-w-5xl">
           <Link
             to="/projects"
@@ -121,7 +117,7 @@ const Valldoaido = () => {
       </header>
 
       {/* -------------------------------------------------------- Foundations */}
-      <section className="px-4 py-14 md:px-10 md:py-16">
+      <section className="relative px-4 py-14 md:px-10 md:py-16">
         <div className="mx-auto max-w-5xl">
           <RevealOnView>
             <h2 className="text-2xl font-bold text-primary-white md:text-3xl">{foundations.title}</h2>
@@ -170,6 +166,7 @@ const Valldoaido = () => {
           </RevealOnView>
         </div>
       </section>
+      </ScrollGlow>
 
       {/* --------------------------------------------------------- Icon system */}
       <section className="px-4 py-14 md:px-10 md:py-16">
